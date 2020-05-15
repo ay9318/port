@@ -25,10 +25,10 @@
                 display: inline-block;
             }     
         }
-        li:nth-child(5)::after {
+        li:nth-child(4)::after {
             content: '';
-            position: absolute; left: 20px; bottom: -5px;
-            width: 70px; height: 3px;
+            position: absolute; left: 19px; bottom: -5px;
+            width: 69px; height: 2px;
             background: #d83832;
         }
 
@@ -58,6 +58,7 @@
 #banner {
     position: relative;
     margin-bottom: 200px;
+
     .banner {
         h2 {
             position: absolute; left: 50%; top: 50%;
@@ -67,7 +68,7 @@
             font-weight: 500;
         }
         img {
-            margin-top: 110px;
+            margin-top: 80px;
         }
     }
 
@@ -88,6 +89,73 @@
         }
     } 
 }
+
+#contents {
+    margin: 0 auto;
+    width: 1200px;
+    overflow: hidden;
+
+    .cont1 {
+        float: left;
+        width: 50%; 
+        position: relative; 
+
+        h3 {
+            color: #212529;
+            font-size: 30px;
+            padding: 12px;
+            box-sizing: border-box;
+            font-weight: 500;            
+        }
+        img {
+            width: 90%;                
+        }
+        p {             
+            position: absolute; left: 30%; top: 60%;
+            transform: translate(-30%, -60%);
+            text-align: center;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute; left: 0; top: 0;
+                width: 20px; height: 20px;
+                background: #96c11f;
+                border-radius: 50p%;
+            }
+        }
+        a {
+            
+            img {
+                width: 20px;
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .cont2 {
+        float: left;
+        width: 50%;
+        h3 {}
+        p {}
+    }
+    .cont3 {
+        float: left;
+        width: 50%;
+        h3 {}
+        p {}
+    }
+    .cont4 {
+        float: left;
+        width: 50%;
+        h3 {}
+        img {width: 500px;}
+        p {}
+    }
+}
+
+
 
 /* footer1 */
 #footer1 {
