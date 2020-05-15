@@ -622,7 +622,7 @@
 }
 
 #brand h2 {
-  background: #fff;
+  background: #000;
   font-size: 62px;
   font-weight: bold;
   padding-bottom: 60px;
@@ -870,7 +870,7 @@
   height: 0;
 }
 
-#footer2 .left .left1 li:last-child:after {
+#footer2 .left .left1 li:last-child::after {
   width: 0;
   height: 0;
 }

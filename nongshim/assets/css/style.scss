@@ -49,7 +49,7 @@
         margin-right: 20px;
         li {
             display: inline;   
-            a{
+            a {
                 width: 30px;
                 display: inline-block;
                 padding: 28px 10px 20px;
@@ -399,7 +399,7 @@
     background: #f6f6f6;
 
     h2 {
-        background: #fff;
+        background: #000;
         font-size: 62px;
         font-weight: bold;
         padding-bottom: 60px;
@@ -616,7 +616,7 @@
                 width: 0;
                 height: 0;
             }
-            li:last-child:after {
+            li:last-child::after {
                 width: 0;
                 height: 0;
             }
