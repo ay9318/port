@@ -1,4 +1,4 @@
-/* var mySwiper = new Swiper ('#banner .swiper-container', {
+ var mySwiper = new Swiper ('#banner .swiper-container', {
     loop: true,
     pagination: {
       el: '.swiper-pagination',
@@ -14,16 +14,14 @@
     infinite: true
   });
 
-  var mySwiper2 = new Swiper ('.notice .swiper-container', {
+ var mySwiper = new Swiper2 ('#fbanner .swiper-container', {
     loop: true,
-    slidesPerView: 'auto',
-    spaceBetween: 60,
-    centeredSlides: true,
+    slidePerView: 2,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
   });
-
-  var mySwiper3 = new Swiper ('.story .swiper-container', {
-    loop: true,
-    slidesPerView: 6,
-    spaceBetween: 60,
-    centeredSlides: true,
-  }); */
