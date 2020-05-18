@@ -384,7 +384,8 @@
 }
 
 .story .swiper-slide .stxt {
-  padding: 40px;
+  padding-top: 30px;
+  text-align: left;
 }
 
 .story .swiper-slide .stxt h3 {
@@ -667,7 +668,7 @@
 }
 
 #brand h2 {
-  background: #000;
+  background: #fff;
   font-size: 62px;
   font-weight: bold;
   padding-bottom: 60px;
