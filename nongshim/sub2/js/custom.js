@@ -11,10 +11,9 @@
     infinite: true
   });
   
-  var mySwiper = new Swiper2 ('#fbanner .swiper-container', {
-    loop: true,
+  var mySwiper2 = new Swiper('#fbanner .swiper-container', {
     slidePerView: 3,
-    scrollbar: {
-      el: '.swiper-scrollbar',
+    scrollbar: {           
+      el: '.swiper-scrollbar',            
     },
   });
