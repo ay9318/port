@@ -259,6 +259,14 @@
     <script src="../sub2/js/swiper.min.js"></script>
     <script src="../sub2/js/custom.js"></script>
     <script>
+          var swiper = new Swiper('.swiper-container', {
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+            loop: true,
+            slidesPerView: '3',
+        });
+        
         //히든 메뉴
         let wHeight = $(window).height(); 
         let dHeight = $(document).height();  
