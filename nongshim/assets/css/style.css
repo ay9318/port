@@ -90,6 +90,10 @@
   display: inline-block;
 }
 
+.header .nav li ul {
+  display: none;
+}
+
 .header .nav li.live a {
   border: 2px solid #fff;
   border-radius: 20px;
@@ -381,6 +385,7 @@
   width: 263px;
   height: 263px;
   margin: 0 auto;
+  background-size: cover;
 }
 
 .story .swiper-slide .stxt {

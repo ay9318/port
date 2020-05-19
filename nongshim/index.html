@@ -70,7 +70,30 @@
             </h1>            
             <nav id="nav" class="nav">
                 <ul>
-                    <li><a href="#">농심소개</a></li>
+                    <li><a href="#">농심소개</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">OVERVIEW</a></li>
+                            <li><a href="#">경영이념</a>
+                                <ul>
+                                    <li><a href="#">경영이념</a></li>
+                                    <li><a href="#">농심 WAY</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">연혁</a></li>
+                            <li><a href="#">세계속의 농심</a></li>
+                            <li><a href="#">CI 소개</a></li>
+                            <li><a href="#">농심그룹</a>
+                                <ul>
+                                    <li><a href="#">농심홀딩스</a></li>
+                                    <li><a href="#">태경농산</a></li>
+                                    <li><a href="#">농심기획</a></li>
+                                    <li><a href="#">농심미분</a></li>
+                                    <li><a href="#"></a></li>
+                                    <li><a href="#">태경농산</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
                     <li><a href="#">지속가능경영</a></li>
                     <li><a href="sub2/index.html">홍보센터</a></li>
                     <li><a href="sub/index.html">투자정보</a></li>
@@ -495,6 +518,41 @@
                 }
             });
         });
+
+        //히든 메뉴
+        let wHeight = $(window).height();
+        let dHeight = $(document).height();
+        let hHeight = $("#header").outerHeight(); 
+
+
+        let moveScroll; //스크롤 값을 감지하기 위한 변수
+        let lastScrollTop = 0; //스크롤의 마지막 위치의 값
+
+        $(window).scroll(function(){
+        moveScroll = true;
+        });
+
+        setInterval(function(){
+        if(moveScroll) {
+            hasScroll();
+            moveScroll = false;
+        }
+        },250);
+
+        function hasScroll(){
+        let wScroll = $(this).scrollTop();  
+        
+        if(wScroll > lastScrollTop) {
+            //스크롤을 내렸을 때
+            $("#header").addClass("on");
+        } else {
+            //스크롤을 올렸을 때
+            if(wScroll + wHeight < dHeight){
+            $("#header").removeClass("on");
+            }
+        }
+        lastScrollTop = wScroll
+        };
     </script>
 </body>
 </html>

@@ -65,6 +65,9 @@
                 padding: 26px 20px;
                 display: inline-block;
             }
+            ul {
+                display: none;
+            }
         }
         li.live {            
             a {
@@ -313,6 +316,7 @@
         .simg {
             width: 263px; height: 263px;
             margin: 0 auto;
+            background-size: cover;
         }
         .stxt {
             padding-top: 30px;
