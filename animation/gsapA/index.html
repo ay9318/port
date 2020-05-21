@@ -345,10 +345,10 @@ $(".btn5").click(function(){
         $(".box5").css("height","400px");
         $(".btn5").click(function(){
             let tl = new TimelineMax();
-            tl.to(".box5 .circle1", {duration: 1, left: "90%", scale: "1", ease: "power2.out"})
-                .to(".box5 .circle1", {duration: 1, top: "80%", scale: "0.5", ease: "power2.out"})
-                .to(".box5 .circle1", {duration: 1, left: "0", scale: "2.5", ease: "power2.out"})
-                .to(".box5 .circle1", {duration: 1, top: "0", scale: "1", ease: "power2.out"})
+            tl.to(".box5 .circle1", {duration: 1, left: "90%", ease: "power2.out"})
+                .to(".box5 .circle1", {duration: 1, top: "80%", ease: "power2.out"})
+                .to(".box5 .circle1", {duration: 1, left: "0", ease: "power2.out"})
+                .to(".box5 .circle1", {duration: 1, top: "0", ease: "power2.out"})
         });
     </script>    
 </body>
