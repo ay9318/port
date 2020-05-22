@@ -1,0 +1,151 @@
+@charset "UTF-8";
+#header {
+  position: relative;
+  z-index: 1000;
+  margin: 20px;
+}
+
+/* header menu*/
+.header .menu {
+  position: relative;
+}
+
+.header .menu .line1 {
+  position: absolute;
+  left: 10px;
+  top: 22px;
+  width: 15px;
+  height: 2px;
+  background: #fff;
+}
+
+.header .menu .line2 {
+  position: absolute;
+  left: 10px;
+  top: 29px;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+}
+
+.header .menu .line3 {
+  position: absolute;
+  left: 10px;
+  top: 36px;
+  width: 15px;
+  height: 2px;
+  background: #fff;
+}
+
+/* header nav*/
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.header h1 {
+  position: absolute;
+  left: 43px;
+  top: 21px;
+}
+
+.header h1 a img {
+  width: 110px;
+}
+
+.header .nav .main-nav {
+  margin: 0 auto;
+  margin: 16px 28px 0 0;
+  padding-left: 700px;
+}
+
+.header .nav .main-nav li {
+  display: inline;
+}
+
+.header .nav .main-nav li a {
+  font-size: 17px;
+  padding: 12px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.header .sub-nav {
+  padding: 20px 250px 0 0;
+  margin-right: 100px;
+}
+
+.header .sub-nav li {
+  display: inline;
+}
+
+.header .sub-nav li a {
+  padding-left: 20px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.header .sub-nav li a span {
+  position: relative;
+}
+
+.header .sub-nav li a span::before {
+  content: '';
+  width: 3px;
+  height: 3px;
+  background: #ec7d2c;
+  position: absolute;
+  left: -10px;
+  top: 8px;
+}
+
+.header .sub-nav2 li {
+  padding: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline;
+}
+
+.header .sub-nav2 li a {
+  font-weight: bold;
+  color: #fff;
+}
+
+.header .sub-nav2 li a img {
+  margin-top: 15px;
+  width: 26px;
+}
+
+.header .sub-nav2 li span {
+  position: relative;
+}
+
+.header .sub-nav2 li span::before {
+  content: '';
+  width: 350px;
+  height: 3px;
+  position: absolute;
+  right: 35px;
+  top: 40px;
+  background: #fff;
+}
+
+.header .sub-nav2 li span::before img {
+  width: 50px;
+}
+
+/* 배너 */
+#banner {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* hot */
+/*# sourceMappingURL=style.css.map */

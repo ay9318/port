@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YES24 티켓</title>
+
+      <!-- style -->
+      <link rel="stylesheet" href="assets/css/reset.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="assets/css/swiper.css">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="header">
+                <div class="menu">
+                    <span class="line1"></span>
+                    <span class="line2"></span>
+                    <span class="line3"></span>
+                </div>
+                <h1><a href="index.html"><img src="assets/img/logo.png" alt="YES24"></a></h1>
+                <nav class="nav">
+                    <ul class="main-nav">
+                        <li><a href="#">콘서트</a></li>
+                        <li><a href="#">뮤지컬</a></li>
+                        <li><a href="#">연극</a></li>
+                        <li><a href="#">클래식</a></li>
+                        <li><a href="#">전시</a></li>
+                        <li><a href="#">아동</a></li>
+                    </ul>
+                </nav>
+                <!-- //nav-->
+                <div class="sub-nav">
+                    <ul>
+                        <li><a href="#"><span>랭킹</span></a></li>
+                        <li><a href="#"><span>이벤트</span></a></li>
+                    </ul>  
+                </div>
+                <div class="sub-nav2">
+                    <ul>
+                        <li><span><a href="#"><img src="assets/img/icon-search.svg" alt="검색"></a></span></li>
+                        <li><a href="#"><img src="assets/img/icon-account.svg" alt="로그인"></a></li>
+                        <li><a href="#"><img src="assets/img/icon-language.svg" alt="언어"></a></li>
+                    </ul>     
+                </div>
+            </div>            
+        </header>
+        <!-- //header-->
+
+        <section id="hot">
+            <div class="hot">
+                <h2>what's hot</h2>
+                <div class="hot1">
+                    <a href="#">
+                        <img src="assets/img/hot-img1.jpg" alt="뮤지컬 6시퇴근">
+                        <span class="circle">50%</span>
+                        <h3><strong>뮤지컬 &lt;6시퇴근&gt;</strong></h3>
+                        <span>2020.05.22 ~ 2020.07.26 대학로 고스트씨어터 /<em>타임세일 50%</em></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- //hot-->
+
+        <div id="banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="#"><img src="assets/img/mbanner01.jpg" alt="미스터트롯"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="assets/img/mbanner02.jpg" alt="펀홈"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="assets/img/mbanner03.jpg" alt="미드나잇"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="assets/img/mbanner04.jpg" alt="KB RAPBEAT FESTIVAL"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="assets/img/mbanner05.jpg" alt="동방신기"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="assets/img/mbanner06.jpg" alt="라흐마니노프"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="assets/img/mbanner07.jpg" alt="태사자"></a></div>
+                </div> 
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>              
+            </div>
+        </div>
+        <!-- //banner-->
+
+    </div>
+    <!-- //wrap-->
+
+<!-- script -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="../package/js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      cssMode: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination'
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
+  </script>
+</body>
+</html>

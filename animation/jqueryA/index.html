@@ -437,7 +437,7 @@ function out() {
                 
                 <!-- Intro11 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro11" class="page-header">Animation09 - </h2>
+                    <h2 id="intro11" class="page-header">Animation09</h2>
                     <h4 class="btn btn9">animation
                         <button >start</button>
                     </h4>
@@ -446,7 +446,19 @@ function out() {
                             <div class="circle"></div>
                         </div>                        
                     </div>
-<pre class="line-numbers language-css"><code>
+<pre class="line-numbers language-css"><code>//Animation09  애니메이션(2바퀴) - 무한 - 10분 뒤 사라지게
+$(".btn9 > button").click(function(){
+    function loop() {
+        $(".circle9 > div")
+        .animate({left: leftWidth}, 1000, "easeInElastic")
+        .animate({left: 0}, 1000, "easeInElastic", loop)
+    }
+    function out() {
+        $(".circle9 > div").hide();
+    }
+    loop()
+    setTimeout(out, 100000);
+});
 </code></pre>
 				</div>
 				<!-- //Intro11 --> 
@@ -469,6 +481,7 @@ function out() {
                         <li><a href="#intro8">Animation06 - infinite</a></li>
                         <li><a href="#intro9">Animation07 - 일정한 간격으로 움직이기</a></li>
                         <li><a href="#intro10">Animation08 - disappear(사라지는)</a></li>
+                        <li><a href="#intro11">Animation09</a></li>
                     </ul>
                 </div>
             </div>
@@ -617,7 +630,18 @@ function out() {
         };
 
         //Animation09  애니메이션(2바퀴) - 무한 - 10분 뒤 사라지게
-
+         $(".btn9 > button").click(function(){
+            function loop() {
+                $(".circle9 > div")
+                .animate({left: leftWidth}, 1000, "easeInElastic")
+                .animate({left: 0}, 1000, "easeInElastic", loop)
+            }
+            function out() {
+                $(".circle9 > div").hide();
+            }
+            loop()
+            setTimeout(out, 100000);
+        });
     </script>
 </body>
 
