@@ -17,3 +17,5 @@ fieldset {border: 0 none;}
 .ir_pm {display: block; overflow: hidden; font-size: 0; line-height: 0; text-indent: -9999px;}
 .ir_wa {display: block; overflow: hidden; position: relative; z-index:  -1; width: 100%; height: 100%;}
 .ir_so {overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px;} 
+
+clearfix::before, clearfix::after {content: ''; clear: both; display: block;}

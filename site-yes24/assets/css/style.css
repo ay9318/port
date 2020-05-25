@@ -1,16 +1,34 @@
-@charset "UTF-8";
-#header {
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#main {
   position: relative;
+  /* header */
+  /* banner */
+}
+
+#main #header {
+  width: 95%;
   z-index: 1000;
-  margin: 20px;
+  overflow: hidden;
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* nav */
 }
 
-/* header menu*/
-.header .menu {
+#main #header .header {
+  float: left;
+}
+
+#main #header .header .ham {
   position: relative;
 }
 
-.header .menu .line1 {
+#main #header .header .ham .line1 {
   position: absolute;
   left: 10px;
   top: 22px;
@@ -19,7 +37,7 @@
   background: #fff;
 }
 
-.header .menu .line2 {
+#main #header .header .ham .line2 {
   position: absolute;
   left: 10px;
   top: 29px;
@@ -28,7 +46,7 @@
   background: #fff;
 }
 
-.header .menu .line3 {
+#main #header .header .ham .line3 {
   position: absolute;
   left: 10px;
   top: 36px;
@@ -37,115 +55,330 @@
   background: #fff;
 }
 
-/* header nav*/
-.header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: relative;
-}
-
-.header h1 {
+#main #header .header .logo h1 {
   position: absolute;
-  left: 43px;
-  top: 21px;
+  left: 63px;
+  top: 40px;
 }
 
-.header h1 a img {
+#main #header .header .logo h1 a img {
   width: 110px;
 }
 
-.header .nav .main-nav {
-  margin: 0 auto;
-  margin: 16px 28px 0 0;
-  padding-left: 700px;
-}
-
-.header .nav .main-nav li {
-  display: inline;
-}
-
-.header .nav .main-nav li a {
-  font-size: 17px;
-  padding: 12px;
-  font-weight: bold;
-  color: #fff;
-}
-
-.header .sub-nav {
-  padding: 20px 250px 0 0;
-  margin-right: 100px;
-}
-
-.header .sub-nav li {
-  display: inline;
-}
-
-.header .sub-nav li a {
-  padding-left: 20px;
-  color: #fff;
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.header .sub-nav li a span {
+#main #header .nav {
+  float: right;
+  width: 60%;
   position: relative;
 }
 
-.header .sub-nav li a span::before {
-  content: '';
-  width: 3px;
-  height: 3px;
-  background: #ec7d2c;
+#main #header .nav .center-nav {
+  float: left;
+  margin-top: 10px;
   position: absolute;
-  left: -10px;
+  left: -30px;
   top: 8px;
 }
 
-.header .sub-nav2 li {
-  padding: 8px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+#main #header .nav .center-nav ul li {
+  padding-left: 20px;
   display: inline;
 }
 
-.header .sub-nav2 li a {
-  font-weight: bold;
+#main #header .nav .center-nav ul li a {
+  font-size: 17px;
   color: #fff;
+  font-weight: bold;
 }
 
-.header .sub-nav2 li a img {
-  margin-top: 15px;
-  width: 26px;
+#main #header .nav .right-nav {
+  float: right;
+  margin-top: 23px;
 }
 
-.header .sub-nav2 li span {
+#main #header .nav .right-nav .right.nav {
   position: relative;
 }
 
-.header .sub-nav2 li span::before {
-  content: '';
-  width: 350px;
-  height: 3px;
+#main #header .nav .right-nav .right.nav ul {
   position: absolute;
-  right: 35px;
-  top: 40px;
-  background: #fff;
-}
-
-.header .sub-nav2 li span::before img {
-  width: 50px;
-}
-
-/* 배너 */
-#banner {
-  position: absolute;
-  right: 0;
+  left: -280px;
   top: 0;
 }
 
-/* hot */
+#main #header .nav .right-nav .right.nav ul li {
+  display: inline;
+}
+
+#main #header .nav .right-nav .right.nav ul li a {
+  padding-right: 25px;
+  position: relative;
+  font-size: 13px;
+  color: #fff;
+  font-weight: bold;
+}
+
+#main #header .nav .right-nav .right.nav ul li a::before {
+  content: '';
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  left: -10px;
+  top: 8px;
+  background: #ec7d2c;
+}
+
+#main #header .nav .right-nav .right.img ul li {
+  padding-left: 10px;
+  display: inline;
+}
+
+#main #header .nav .right-nav .right.img ul li a img {
+  width: 25px;
+}
+
+#main #banner {
+  margin-bottom: 30px;
+}
+
+/* contents */
+#contents .title h3 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 50px;
+}
+
+/* What's hot */
+#con1 .hot li {
+  float: left;
+  margin: 12px;
+  position: relative;
+}
+
+#con1 .hot li .bigOne a img {
+  width: 410px;
+  display: block;
+}
+
+#con1 .hot li .bigOne a .hot1-text {
+  text-align: center;
+}
+
+#con1 .hot li .bigOne a .hot1-text h4 {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#con1 .hot li .bigOne a .hot1-text p {
+  font-size: 14px;
+  color: #999;
+  padding: 8px 0 18px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+#con1 .hot li .bigOne a .hot1-text p span {
+  font-weight: 400;
+  color: #ed334a;
+}
+
+#con1 .hot li .bigOne a .big-circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  background: #ec7d2c;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  width: 68px;
+  height: 68px;
+  position: absolute;
+  left: 10px;
+  bottom: 70px;
+}
+
+#con1 .hot li {
+  float: left;
+}
+
+#con1 .hot li .hotList a img {
+  width: 230px;
+}
+
+#con1 .hot li .hotList a .hotList-text {
+  opacity: 0;
+  width: 100%;
+  height: 350px;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: table;
+}
+
+#con1 .hot li .hotList a .hotList-text div {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#con1 .hot li .hotList a .hotList-text div .tit {
+  line-height: 25px;
+  color: #fff;
+  font-size: 18px;
+}
+
+#con1 .hot li .hotList a .hotList-text div .detail {
+  line-height: 20px;
+  font-size: 13px;
+  color: #fff;
+  margin: 15px 0;
+}
+
+#con1 .hot li .hotList a .hotList-text div .event {
+  font-size: 18px;
+  color: #ec7d2c;
+  line-height: 35px;
+}
+
+#con1 .hot li .hotList a .circle {
+  position: relative;
+}
+
+#con1 .hot li .hotList a .circle span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 19px;
+  font-weight: 700;
+  color: #fff;
+  background: #ec7d2c;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  width: 57px;
+  height: 57px;
+  position: absolute;
+  left: 10px;
+  bottom: -20px;
+}
+
+/* ticket*/
+#con2 {
+  padding-top: 120px;
+  clear: both;
+}
+
+#con2 .ticket {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#con2 .ticket .box {
+  margin: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  float: left;
+}
+
+#con2 .ticket .box a {
+  position: relative;
+}
+
+#con2 .ticket .box a img {
+  width: 230px;
+}
+
+#con2 .ticket .box a .day {
+  position: absolute;
+  left: 20%;
+  top: 90px;
+  display: block;
+  color: #fff;
+  font-size: 25px;
+  width: 111px;
+  height: 111px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  border: 7px solid #fff;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#con2 .ticket .box a .text {
+  border: 1px solid #eee;
+  text-align: center;
+}
+
+#con2 .ticket .box a .text time {
+  position: relative;
+  display: block;
+  font-size: 15px;
+  color: #ec7d2c;
+  padding: 5px 0 26px;
+}
+
+#con2 .ticket .box a .text time::after {
+  content: '';
+  width: 25px;
+  height: 3px;
+  background: #000;
+  position: absolute;
+  left: 45%;
+  bottom: 21%;
+}
+
+#con2 .ticket .box a .text p {
+  position: relative;
+  font-weight: 600;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  font-size: 14px;
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#con2 .ticket .more {
+  position: absolute;
+  left: 41%;
+  top: 470px;
+  border: 1px solid #ccc;
+  padding: 15px 50px;
+  font-size: 14px;
+}
+
+/* sbanner01 */
+.sbanner01 img {
+  margin: 80px 0px;
+}
+
+/* ec7d2c */
+/* ranking*/
 /*# sourceMappingURL=style.css.map */

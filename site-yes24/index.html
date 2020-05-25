@@ -1,95 +1,287 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko"">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YES24 티켓</title>
 
-      <!-- style -->
-      <link rel="stylesheet" href="assets/css/reset.css">
-      <link rel="stylesheet" href="assets/css/style.css">
-      <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
 </head>
 <body>
     <div id="wrap">
-        <header id="header">
-            <div class="header">
-                <div class="menu">
-                    <span class="line1"></span>
-                    <span class="line2"></span>
-                    <span class="line3"></span>
-                </div>
-                <h1><a href="index.html"><img src="assets/img/logo.png" alt="YES24"></a></h1>
+        <div id="main">
+            <header id="header">
+                <div class="header">
+                    <div class="ham">
+                        <span class="line1"></span>
+                        <span class="line2"></span>
+                        <span class="line3"></span>
+                    </div>
+                    <div class="logo">
+                        <h1><a href="index.html"><img src="assets/img/logo.png" alt="YES24"></a></h1>
+                    </div>
+                </div>            
                 <nav class="nav">
-                    <ul class="main-nav">
-                        <li><a href="#">콘서트</a></li>
-                        <li><a href="#">뮤지컬</a></li>
-                        <li><a href="#">연극</a></li>
-                        <li><a href="#">클래식</a></li>
-                        <li><a href="#">전시</a></li>
-                        <li><a href="#">아동</a></li>
-                    </ul>
+                    <div class="center-nav">
+                        <ul>
+                            <li><a href="#">콘서트</a></li>
+                            <li><a href="#">뮤지컬</a></li>
+                            <li><a href="#">연극</a></li>
+                            <li><a href="#">클래식</a></li>
+                            <li><a href="#">전시</a></li>
+                            <li><a href="#">아동</a></li>
+                        </ul>
+                    </div>
+                    <!-- //center-nav -->     
+                    <div class="right-nav">
+                        <div class="right nav">
+                            <ul>
+                                <li><a href="#">랭킹</a></li>
+                                <li><a href="#">이벤트</a></li>
+                            </ul>
+                        </div>
+                        <div class="right img">
+                            <ul>
+                                <li><input type="text"></li>
+                                <li>  
+                                    <a href="#"><img src="assets/img/icon-search.svg" alt="검색"></a></li>
+                                <li> <a href="#"><img src="assets/img/icon-account.svg" alt="MY티켓"></a></li>
+                                <li>    <a href="#"><img src="assets/img/icon-language.svg" alt="GLOBAL"></a></li>
+                                </ul>      
+                        </div>
+                    </div>
+                    <!-- //right-nav-->     
                 </nav>
-                <!-- //nav-->
-                <div class="sub-nav">
-                    <ul>
-                        <li><a href="#"><span>랭킹</span></a></li>
-                        <li><a href="#"><span>이벤트</span></a></li>
-                    </ul>  
-                </div>
-                <div class="sub-nav2">
-                    <ul>
-                        <li><span><a href="#"><img src="assets/img/icon-search.svg" alt="검색"></a></span></li>
-                        <li><a href="#"><img src="assets/img/icon-account.svg" alt="로그인"></a></li>
-                        <li><a href="#"><img src="assets/img/icon-language.svg" alt="언어"></a></li>
-                    </ul>     
-                </div>
-            </div>            
-        </header>
-        <!-- //header-->
+                <!-- //nav -->                     
+            </header>
+            <!-- //header -->              
+    
+            <section id="banner">
+                <div class="banner">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href="#"><img src="assets/img/mbanner01.jpg" alt="미스터트롯"></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="assets/img/mbanner02.jpg" alt="펀홈"></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="assets/img/mbanner03.jpg" alt="미드나잇"></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="assets/img/mbanner04.jpg" alt="KB RAPBEAT FESTIVAL"></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="assets/img/mbanner05.jpg" alt="동방신기"></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="assets/img/mbanner06.jpg" alt="라흐마니노프"></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="assets/img/mbanner07.jpg" alt="태사자"></a></div>
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>            
+            </section>
+            <!-- //banner -->
+        </div>       
 
-        <section id="hot">
-            <div class="hot">
-                <h2>what's hot</h2>
-                <div class="hot1">
-                    <a href="#">
-                        <img src="assets/img/hot-img1.jpg" alt="뮤지컬 6시퇴근">
-                        <span class="circle">50%</span>
-                        <h3><strong>뮤지컬 &lt;6시퇴근&gt;</strong></h3>
-                        <span>2020.05.22 ~ 2020.07.26 대학로 고스트씨어터 /<em>타임세일 50%</em></span>
-                    </a>
+         <section id="contents">
+            <div class="container">
+                <div class="title">
+                    <h3>what's hot</h3>
                 </div>
+                <!-- //title-->    
+                <article id="con1">
+                     <ul class="hot clearfix">
+                         <li>
+                            <div class="bigOne">
+                                <a href="#"><img src="assets/img/hot-img1.jpg" alt="뮤지컬 6시퇴근"> 
+                                    <div class="hot1-text">
+                                        <h4>뮤지컬 &lt;6시퇴근&gt;</h4>
+                                        <p>2020.05.22 ~ 2020.07.26 대학로 고스트씨어터 / <span>타임세일 50%</span></p>
+                                    </div>
+                                <p class="big-circle">50%</p>
+                                </a>
+                            </div>
+                         </li>
+                         <!-- //hot1 -->
+                         <li>
+                            <div class="hotList">
+                                <a href="#">
+                                    <img src="assets/img/hot-img2.jpg" alt="SM타운">                      
+                                    <div class="hotList-text">
+                                        <div>
+                                            <p class="tit">SMTOWN MUSEUM</p>
+                                            <p class="detail">OPEN RUN <br> 코엑스아티움 SMTOWN MUSEUM</p>
+                                            <P class="event">온라인 예매 10%</P>
+                                        </div>
+                                    </div>
+                                <p class="circle"><span>10%</span></p>            
+                                </a> 
+                            </div>
+                         </li>
+                         <!-- //hot2 -->
+                         <li>
+                            <div class="hotList">
+                                <a href="#">
+                                    <img src="assets/img/hot-img3.jpg" alt="크리스토퍼 내한공연">                      
+                                    <div class="hotList-text">
+                                        <div>
+                                            <p class="tit">크리스토퍼 내한공연</p>
+                                            <p class="detail">2020.08.29 ~ 2020.08.30<br>YES24 LIVE HALL</p>
+                                            <P class="event">스탠딩석 77,000원</P>
+                                        </div>
+                                    </div>        
+                                </a> 
+                            </div>
+                         </li>
+                         <!-- //hot3 -->
+                         <li>
+                            <div class="hotList">
+                                <a href="#">
+                                    <img src="assets/img/hot-img4.jpg" alt="김사월 쇼">                      
+                                    <div class="hotList-text">
+                                        <div>
+                                            <p class="tit">김사월 쇼 : 반짝 반짝</p>
+                                            <p class="detail">2020.05.23 ~ 2020.05.24<br>노들섬 라이브하우스</p>
+                                            <P class="event">전석 55,000원</P>
+                                        </div>
+                                    </div>
+                                <p class="circle"><span>단독</span></p>            
+                                </a> 
+                            </div>
+                         </li>
+                         <!-- //hot4 -->
+                         <li>
+                            <div class="hotList">
+                                <a href="#">
+                                    <img src="assets/img/hot-img5.jpg" alt="오페라의 유령"">                      
+                                    <div class="hotList-text">
+                                        <div>
+                                            <p class="tit">뮤지컬 &lt;오페라의 유령&gt;</p>
+                                            <p class="detail">2020.03.14 ~ 2020.08.08<br>블루스퀘어 인터파크홀</p>
+                                            <P class="event">3,4인패키지 ~15%</P>
+                                        </div>
+                                    </div>
+                                <p class="circle"><span>15%</span></p>            
+                                </a> 
+                            </div>
+                         </li>
+                         <!-- //hot5 -->
+                         <li>
+                            <div class="hotList">
+                                <a href="#">
+                                    <img src="assets/img/hot-img6.jpg" alt="2호선 세입자"">                      
+                                    <div class="hotList-text">
+                                        <div>
+                                            <p class="tit">연극 &lt;2호선세입자&gt;</p>
+                                            <p class="detail">2019.03.15 ~ 2020.05.31<br>대학로 바탕골 소극장</p>
+                                            <P class="event">미소자유석 10,000원</P>
+                                        </div>
+                                    </div>     
+                                </a> 
+                            </div>
+                         </li>
+                         <!-- //hot6 -->
+                         <li>
+                            <div class="hotList">
+                                <a href="#">
+                                    <img src="assets/img/hot-img7.jpg" alt="지젤"">                      
+                                    <div class="hotList-text">
+                                        <div>
+                                            <p class="tit">국립발레단 &lt;지젤&gt;</p>
+                                            <p class="detail">2020.06.10 ~ 2020.06.14<br>예술의전당 오페라극장</p>
+                                            <P class="event">3층석 5,000원</P>
+                                        </div>
+                                    </div>           
+                                </a> 
+                            </div>
+                         </li>
+                         <!-- //hot7 -->
+                    </ul>       
+                </article>
+                <!-- //hot -->
             </div>
-        </section>
-        <!-- //hot-->
+            <!-- //container -->
+                <article id="con2">
+                    <div class="container">
+                        <div class="title">
+                            <h3>ticket open</h3>
+                        </div>
+                        <!-- //title-->                
+                        <div class="ticket clearfix">
+                            <div class="box">
+                                <a href="#">
+                                    <img src="assets/img/ticket01.jpg" alt="어쩌면 해피엔딩">
+                                    <span class="day">D-5</span>                          
+                                <div class="text">
+                                    <time>2020.05.29(금) 14:00</time>
+                                    <p>뮤지컬 [어쩌면 해피엔딩]</p> 
+                                </div>
+                                </a>
+                            </div>                        
+                            <div class="box">
+                                <a href="#">
+                                    <img src="assets/img/ticket02.jpg" alt="창작가무극 잃어버린 얼굴">
+                                    <span class="day">D-19</span>                          
+                                <div class="text">
+                                    <time>2020.06.12(금) 11:00</time>
+                                    <p>창작가무극 &lt;잃어버린 얼굴 1895&gt;</p> 
+                                </div>
+                                </a>
+                            </div>                        
+                            <div class="box">
+                                <a href="#">
+                                    <img src="assets/img/ticket03.jpg" alt="포레스텔라 콘서트">
+                                    <span class="day">D-3</span>                          
+                                <div class="text">
+                                    <time>2020.05.27(수) 14:00</time>
+                                    <p>포레스텔라 콘서트 &lt;넬라 판타지아&gt;</p> 
+                                </div>
+                                </a>
+                            </div>                        
+                            <div class="box">
+                                <a href="#">
+                                    <img src="assets/img/ticket04.jpg" alt="오페라의 유령">
+                                    <span class="day">D-2</span>                          
+                                <div class="text">
+                                    <time>2020.05.26(화) 14:00</time>
+                                    <p>뮤지컬 [오페라의 유령] 월드투어</p> 
+                                </div>
+                                </a>
+                            </div>
+                            <div class="more">티켓오픈 더보기 +</div>                                            
+                        </div>                      
+                    </div>
+                    <!-- //container -->
+                </article>
+                <!-- //ticket -->
+                <div class="sbanner01">
+                    <img src="assets/img/sbanner01.png" alt="미아 파밀리아">
+                </div>
+                <!-- //sbanner01 -->
 
-        <div id="banner">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><a href="#"><img src="assets/img/mbanner01.jpg" alt="미스터트롯"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="assets/img/mbanner02.jpg" alt="펀홈"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="assets/img/mbanner03.jpg" alt="미드나잇"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="assets/img/mbanner04.jpg" alt="KB RAPBEAT FESTIVAL"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="assets/img/mbanner05.jpg" alt="동방신기"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="assets/img/mbanner06.jpg" alt="라흐마니노프"></a></div>
-                    <div class="swiper-slide"><a href="#"><img src="assets/img/mbanner07.jpg" alt="태사자"></a></div>
-                </div> 
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>              
-            </div>
-        </div>
-        <!-- //banner-->
-
+                <article id="con3">
+                <div class="container">
+                    <div class="title">
+                        <h3>ranking</h3>                        
+                    </div>
+                    <svg class="bg-img" style="width: 356px; height: 384px; margin-top: -252px; margin-left: -228px;">
+                        <filter id="svgFilter">
+                            <feGaussianBlur id="svgGaussBlur" in="SourceGraphic" stdDeviation="7"></feGaussianBlur>
+                            <feComponentTransfer>
+                                <feFuncA type="discrete" tableValues="1 1"></feFuncA>
+                            </feComponentTransfer>
+                        </filter>
+                        <image xlink:href="http://tkfile.yes24.com/upload2/perfblog/202005/20200525/20200525-angel_new_36651.jpg/dims/quality/70/" filter="url(#svgFilter)" width="100%" height="100%" x="0" y="0"></image>
+                    </svg>
+                </div>                    
+                </article>
+                <!-- //ranking -->
+         </section>
+         <!-- //contents -->
     </div>
-    <!-- //wrap-->
+     <!-- //wrap -->
 
-<!-- script -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="../package/js/swiper.min.js"></script>
-<script>
-    var swiper = new Swiper('.swiper-container', {
+    <script src="assets/js/swiper.min.js"></script>
+     <script>
+    var swiper = new Swiper('.banner .swiper-container', {
       cssMode: true,
       navigation: {
         nextEl: '.swiper-button-next',

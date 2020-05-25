@@ -110,7 +110,7 @@
         </div>
         </header>
     <!-- //header -->
-
+    <main id="contents">
     <section id="banner">
         <div>            
             <div class="swiper-container">
@@ -436,6 +436,8 @@
         <a href="#" class="brand-btn">브랜드관</a>        
     </section>
     <!-- //brand -->
+    </main>
+    <!-- //main -->
 
     <section id="footer1">
         <div class="footer1">
@@ -503,6 +505,19 @@
     <script src="assets/js/custom.js"></script>
     <script>
         $(document).ready(function() {
+
+            //애니메이션
+            $(window).scroll(function(){
+                const scrollTop = $(window).scrollTop() +$(window).height()/2;
+                
+                $("#contents > section").each(function(){
+                if(scrollTop > $(this).offset().top) {
+                    $(this).addClass("show");
+                    }
+                });
+            });          
+
+            //배너 이미지 슬라이드
             $(".swiper-pagination").append("<a href='#' class='icon-pause'><img src='assets/img/icon-pause.svg' alt='일시정지'></a>")
 
             $(".swiper-pagination a").click(function(e) {
