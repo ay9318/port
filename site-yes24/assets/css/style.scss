@@ -8,12 +8,13 @@
     position: relative;
     /* header */
     #header {
-        width: 95%;
+        width: 100%;
         z-index: 1000;
         overflow: hidden;
-        padding: 20px;
         position: absolute;
         left: 0; top: 0;
+        padding: 20px;
+        box-sizing: border-box;
 
         .header {
             float: left;
@@ -53,7 +54,7 @@
                 h1 {
                     position: absolute;
                     left: 63px;
-                    top: 40px;
+                    top: 41px;
 
                     a {
                         img {
