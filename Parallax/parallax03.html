@@ -232,7 +232,7 @@
     <script>
         $(window).scroll(function(){
             const scrollTop = $(window).scrollTop() +$(window).height()/2;
-            //console.log(scrollTop)
+            console.log(scrollTop)
             $(".scrollTop").text(scrollTop);
             $(".s1OT").text(parseInt($("#section1").offset().top));
             $(".s2OT").text(parseInt($("#section2").offset().top));
@@ -288,14 +288,9 @@
             if (scrollTop > parseInt($("#section9").offset().top)) {
                 $(".s9OT").css("color","red");
             } else {
-                $(".s9OT").css("color","#000");    
+                $(".s9OT").css("color","#000");
             } */
-            
-            /* $(".content-item").each(function(){
-                if(scrollTop > $(this).offset().top) {
-                    $(this).addClass("show");
-                }
-            }); */
+                      
 
             if(scrollTop > parseInt($(".content-item").offset().top)) {
                 $(this).css("color","red");
@@ -303,7 +298,7 @@
                 $(this).css("color","black");
             }
 
-            /* if( scrollTop > parseInt ($("#section1").offset().top)) {
+            if( scrollTop > parseInt ($("#section1").offset().top)) {
                 $("#section1").addClass("show");
             }
             if( scrollTop > parseInt ($("#section2").offset().top)) {
@@ -329,7 +324,7 @@
             }
             if( scrollTop > parseInt ($("#section8").offset().top)) {
                 $("#section9").addClass("show");
-            } */
+            }
 
             $(".content-item").each(function(){
                 if(scrollTop > $(this).offset().top) {
