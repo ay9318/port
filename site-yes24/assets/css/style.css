@@ -485,9 +485,7 @@
 }
 
 #con4 .event {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  width: 380px;
 }
 
 #con4 .event .swiper-container .wiper-wrapper .swiper-slide img {
@@ -579,5 +577,78 @@
   top: 0;
   width: 981px;
   height: 560px;
+}
+
+/* con5 */
+#con5 {
+  font-family: 'NanumBarunGothic', 'Malgun Gothic', sans-serif;
+  margin-bottom: 100px;
+}
+
+#con5 .container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#con5 .title {
+  margin-bottom: 80px;
+}
+
+#con5 .title h3 {
+  position: relative;
+}
+
+#con5 .title h3::before {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background: #e92f75;
+  position: absolute;
+  left: 730px;
+  bottom: 15px;
+}
+
+#con5 .title h3::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background: #e92f75;
+  position: absolute;
+  right: 735px;
+  bottom: 15px;
+}
+
+#con5 .musical {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#con5 .musical a {
+  margin-left: 40px;
+}
+
+#con5 .musical a .musical-img img {
+  width: 270px;
+}
+
+#con5 .musical a .musical-img:hover img {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+#con5 .musical a .musical-text {
+  margin-top: 25px;
+}
+
+#con5 .musical a .musical-text p {
+  font-size: 16px;
+  text-align: center;
+}
+
+#con5 .musical a:hover {
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */
