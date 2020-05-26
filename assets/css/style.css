@@ -223,7 +223,7 @@
 	font-family: 'Gaegu', cursive; font-size: 40px;
 }
 #contents_tit p a {
-	color:#2c94c4; 
+	color: #444; 
 }
 
 
@@ -283,8 +283,8 @@
 }
 .gridly li a:hover {
     box-shadow: 
-    inset -100px 0 0 0 #93cfeb,
-    inset 100px 0 0 0 #93cfeb;
+    inset -100px 0 0 0 #f4a6c6,
+    inset 100px 0 0 0 #f4a6c6;
     color: #fff
 }
 
@@ -300,8 +300,8 @@
 
 .gridly .webstandard a:hover{
     box-shadow: 
-    inset -100px 0 0 0 #93cfeb,
-    inset 100px 0 0 0 #93cfeb;
+    inset -100px 0 0 0 #f4a6c6,
+    inset 100px 0 0 0 #f4a6c6;
     color: #fff
 }
 .gridly .html5 a {
