@@ -656,8 +656,19 @@
                 <article id="con8">
                     <div class="container">
                         <div class="title">
-                            <img src="assets/img/title/tit7.png" alt="review" & interview">                              
-                        </div>
+                            <img src="assets/img/title/tit7.png" alt="review" & interview">
+                        </div>       
+                        <!-- Swiper -->
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="assets/img/review01.jpg" alt="미드나잇 액터뮤지션"></div>
+                            <div class="swiper-slide"><img src="assets/img/review02.jpg" alt="라흐마니노프"></div>
+                            <div class="swiper-slide"><img src="assets/img/review03.jpg" alt="오페라의 유령"></div>
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div> 
                     </div>
                 </article>
                 <!-- //con8 -->
@@ -699,6 +710,19 @@
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
+      },
+    });
+
+
+    //리뷰 스와이프
+    var swiper = new Swiper('#con8 .swiper-container', {
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 200,
+        centeredSlides: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
     });
   </script>

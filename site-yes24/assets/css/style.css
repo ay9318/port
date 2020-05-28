@@ -817,8 +817,12 @@ body {
 
 /* con8 */
 #con8 {
-  width: 100%;
   margin-bottom: 100px;
+}
+
+#con8 .container {
+  width: 100%;
+  margin: 0 auto;
 }
 
 #con8 .title {

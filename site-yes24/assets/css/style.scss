@@ -780,8 +780,11 @@ body {
 
 /* con8 */
 #con8 {
-    width: 100%;
     margin-bottom: 100px;
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
     .title {
         margin: 20px 0 80px;
         img {
