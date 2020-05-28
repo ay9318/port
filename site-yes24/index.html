@@ -307,6 +307,15 @@
                                     <li>
                                         <a href="#">
                                             <div class="box">
+                                                <svg class="bg-img">
+                                                    <filter id="svgFilter">
+                                                        <feGaussianBlur id="svgGaussBlur" in="SourceGraphic" stdDeviation="7"></feGaussianBlur>
+                                                        <feComponentTransfer>
+                                                            <feFuncA type="discrete" tableValues="1 1"></feFuncA>
+                                                        </feComponentTransfer>
+                                                    </filter>
+                                                    <image xlink:href="http://tkfile.yes24.com/upload2/perfblog/202005/20200518/20200518-35152_1.jpg/dims/quality/70/" filter="url(#svgFilter)" width="100%" height="100%" x="0" y="0"></image>
+                                                </svg>
                                                 <img src="assets/img/ranking_M02.jpg" alt="라흐마니노프">
                                             </div>
                                             <div class="text">
@@ -321,6 +330,86 @@
                                     <li>
                                         <a href="#">
                                             <div class="box">
+                                                <svg class="bg-img">
+                                                    <filter id="svgFilter">
+                                                        <feGaussianBlur id="svgGaussBlur" in="SourceGraphic" stdDeviation="7"></feGaussianBlur>
+                                                        <feComponentTransfer>
+                                                            <feFuncA type="discrete" tableValues="1 1"></feFuncA>
+                                                        </feComponentTransfer>
+                                                    </filter>
+                                                    <image xlink:href="http://tkfile.yes24.com/upload2/perfblog/202005/20200513/20200513-36375_1.jpg/dims/quality/70/" filter="url(#svgFilter)" width="100%" height="100%" x="0" y="0"></image>
+                                                </svg>
+                                                <img src="assets/img/ranking_M03.jpg" alt="드라큘라">
+                                            </div>
+                                            <div class="text">
+                                                <p>뮤지컬 드라큘라 (Dracula : The Musical</p>
+                                                <span>2020.02.11 ~ 2020.06.07 샤롯데씨어터</span>
+                                            </div>
+                                            <div class="rank-num">
+                                                <p>3위</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ol>
+                                <ol class="rank-list">
+                                    <li>
+                                        <a href="#">
+                                            <div class="box">
+                                                <svg class="bg-img">
+                                                    <filter id="svgFilter">
+                                                        <feGaussianBlur id="svgGaussBlur" in="SourceGraphic" stdDeviation="7"></feGaussianBlur>
+                                                        <feComponentTransfer>
+                                                            <feFuncA type="discrete" tableValues="1 1"></feFuncA>
+                                                        </feComponentTransfer>
+                                                    </filter>
+                                                    <image xlink:href="http://tkfile.yes24.com/upload2/perfblog/202005/20200525/20200525-angel_new_36651.jpg/dims/quality/70/" filter="url(#svgFilter)" width="100%" height="100%" x="0" y="0"></image>
+                                                </svg>
+                                                <img src="assets/img/ranking_M01.jpg" alt="미드나잇:액터뮤지션">
+                                            </div>
+                                            <div class="text">
+                                                <p>뮤지컬 &lt;미드나잇 : 액터뮤지션&gt;</p>
+                                                <span>2020.04.11 ~ 2020.07.05 예스24스테이지 3관</span>
+                                            </div>
+                                            <div class="rank-num">
+                                                <p>1위</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="box">
+                                                <svg class="bg-img">
+                                                    <filter id="svgFilter">
+                                                        <feGaussianBlur id="svgGaussBlur" in="SourceGraphic" stdDeviation="7"></feGaussianBlur>
+                                                        <feComponentTransfer>
+                                                            <feFuncA type="discrete" tableValues="1 1"></feFuncA>
+                                                        </feComponentTransfer>
+                                                    </filter>
+                                                    <image xlink:href="http://tkfile.yes24.com/upload2/perfblog/202005/20200518/20200518-35152_1.jpg/dims/quality/70/" filter="url(#svgFilter)" width="100%" height="100%" x="0" y="0"></image>
+                                                </svg>
+                                                <img src="assets/img/ranking_M02.jpg" alt="라흐마니노프">
+                                            </div>
+                                            <div class="text">
+                                                <p>뮤지컬 &lt;라흐마니노프&gt;</p>
+                                                <span>2020.03.14 ~ 2020.06.21 예스24스테이지 1관</span>
+                                            </div>
+                                            <div class="rank-num">
+                                                <p>2위</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="box">
+                                                <svg class="bg-img">
+                                                    <filter id="svgFilter">
+                                                        <feGaussianBlur id="svgGaussBlur" in="SourceGraphic" stdDeviation="7"></feGaussianBlur>
+                                                        <feComponentTransfer>
+                                                            <feFuncA type="discrete" tableValues="1 1"></feFuncA>
+                                                        </feComponentTransfer>
+                                                    </filter>
+                                                    <image xlink:href="http://tkfile.yes24.com/upload2/perfblog/202005/20200513/20200513-36375_1.jpg/dims/quality/70/" filter="url(#svgFilter)" width="100%" height="100%" x="0" y="0"></image>
+                                                </svg>
                                                 <img src="assets/img/ranking_M03.jpg" alt="드라큘라">
                                             </div>
                                             <div class="text">
@@ -595,9 +684,10 @@
     });
 
     //탭 메뉴
-    let tab = $(".tab");
+    let box = $("#con3 .ranking");
 
-    tab.find(".rank-box > ol:nth-child(1) > li").hide();
+    // box.find("div").hide();
+    // box.find("").show();
 
 
     //event swiper

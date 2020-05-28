@@ -433,9 +433,9 @@ body {
     .ranking {
         .tab {
             text-align: center;
-            font-size: 18px;
             margin-bottom: 20px;
             a {
+                font-size: 18px;
                 padding: 0 15px;
                 color: #555;
             &hover {color: #ec7d2c;}
@@ -454,12 +454,22 @@ body {
                 li {
                     a {
                         .box {
+                            overflow: hidden;
                             position: relative;
                             margin: 20px;
-                            width: 350px;
+                            width: 380px;
                             height: 350px;
                             background: #ccc;
-                            svg {}
+                            svg {
+                                width: 456px;
+                                height: 504px;
+                                margin-top: -40px;
+                                margin-left: -50px;
+                                transition: all 0.8s ease;
+                            }
+                            svg:hover {
+                                transform: scale(1.2, 1.2);
+                            }
                             img {
                                 position: absolute;
                                 left: 50%; top: 50%;
@@ -470,7 +480,7 @@ body {
                         }
                         .text {
                             text-align: center;
-                            border-bottom: 1px solid #eee;
+                            position: relative;
                             padding-bottom: 20px;
                             p {
                                 font-size: 14px;
@@ -478,7 +488,15 @@ body {
                             }
                             span {
                                 font-size: 13px;
-                                color: #999;
+                                color: #999;                                
+                            }
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                right: 20px; bottom: -10px;
+                                width: 390px;
+                                height: 1px;
+                                background: #ccc;;
                             }
                         }
                         .rank-num {
@@ -512,14 +530,12 @@ body {
 
 #con4 {
     margin: 15% 0;
-    .container {width: 80%;}
+    .container {}
     .event {
-        width: 380px;
         .swiper-container { 
             .wiper-wrapper {
                 .swiper-slide {
                     img {
-                        width: 380px;
                     }
                 }
             }            

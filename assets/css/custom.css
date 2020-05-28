@@ -73,7 +73,6 @@ body {background:#f1f4fb url(../img/body_bg.gif)}
 	display: none;
 }
 #header img {width: 250px; display: block; margin: 0 auto;}
-#header img:hover {transform: translate(-50%);}
 
 #header h1{
 	color: #fff;
