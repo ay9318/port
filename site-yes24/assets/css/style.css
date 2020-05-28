@@ -147,6 +147,10 @@ body {
   margin-bottom: 30px;
 }
 
+#main #banner .banner .swiper-container .swiper-scrollbar ul {
+  display: none;
+}
+
 /* contents */
 #contents .title {
   text-align: center;
@@ -826,10 +830,222 @@ body {
 }
 
 #con8 .title {
-  margin: 20px 0 80px;
+  margin: 0 0 80px;
 }
 
 #con8 .title img {
   width: 350px;
+}
+
+/* con9 */
+#con9 {
+  overflow: hidden;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #ccc;
+}
+
+#con9 .con-left {
+  float: left;
+}
+
+#con9 .con-left dl {
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+#con9 .con-left dl dt {
+  font-size: 13px;
+  width: 45px;
+  float: left;
+  color: #999;
+}
+
+#con9 .con-left dl dd {
+  font-size: 13px;
+  color: #333;
+}
+
+#con9 .con-left dl dd span {
+  color: #999;
+}
+
+#con9 .con-center {
+  float: left;
+  margin-left: 70px;
+  padding: 0px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#con9 .con-center a {
+  display: inline-block;
+  font-size: 15px;
+  color: #333;
+  margin: 0 30px;
+  text-align: center;
+  font-weight: 700;
+}
+
+#con9 .con-center a img {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: block;
+}
+
+#con9 .con-right {
+  float: right;
+  overflow: hidden;
+}
+
+#con9 .con-right .con-right-left {
+  float: left;
+  padding: 10px 20px;
+}
+
+#con9 .con-right .con-right-left .social {
+  margin-bottom: 10px;
+}
+
+#con9 .con-right .con-right-left .social a img {
+  padding: 8px;
+}
+
+#con9 .con-right .con-right-right {
+  float: right;
+}
+
+/* footer */
+#footer {
+  clear: both;
+}
+
+#footer .footer-menu {
+  border-bottom: 1px solid #f6f6f6;
+  padding-bottom: 20px;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+#footer .footer-menu .footer-menu-text {
+  float: left;
+}
+
+#footer .footer-menu .footer-menu-text ul li {
+  position: relative;
+  display: inline;
+}
+
+#footer .footer-menu .footer-menu-text ul li::after {
+  content: '';
+  width: 1px;
+  height: 15px;
+  background: #eee;
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+#footer .footer-menu .footer-menu-text ul li a {
+  font-size: 15px;
+  color: #333;
+  padding: 0 10px;
+}
+
+#footer .footer-menu .footer-menu-text ul li:first-child::after {
+  width: 0;
+  height: 0;
+}
+
+#footer .footer-menu .footer-menu-btn {
+  border: 1px solid #999;
+  float: right;
+}
+
+#footer .footer-menu .footer-menu-btn ul li {
+  padding: 0px 50px 0px 10px;
+  margin-bottom: 1px;
+}
+
+#footer .footer-menu .footer-menu-btn ul li a {
+  position: relative;
+  display: block;
+  font-size: 13px;
+  color: #666;
+  height: 24px;
+}
+
+#footer .footer-menu .footer-menu-btn ul li a img {
+  position: absolute;
+  right: -40px;
+  top: 8px;
+}
+
+#footer .footer-menu .footer-menu-btn ul li:first-child {
+  cursor: pointer;
+  border-bottom: 1px solid #999;
+}
+
+#footer .footer-menu .footer-menu-btn ul li:first-child a {
+  font-size: 16px;
+  color: #000;
+  height: 28px;
+}
+
+#footer .footer-text {
+  overflow: hidden;
+}
+
+#footer .footer-text .footer-text-left {
+  float: left;
+  margin: 20px 10px;
+}
+
+#footer .footer-text .footer-text-center {
+  padding: 0 50px;
+  float: left;
+}
+
+#footer .footer-text .footer-text-center p {
+  font-size: 15px;
+  color: #333;
+  padding-bottom: 10px;
+}
+
+#footer .footer-text .footer-text-center p a {
+  padding-right: 10px;
+  position: relative;
+  margin-left: 10px;
+  background: url(../img/f-arrow.png) no-repeat right center;
+}
+
+#footer .footer-text .footer-text-center .tc2 {
+  font-size: 13px;
+  color: #999;
+  padding-bottom: 10px;
+}
+
+#footer .footer-text .footer-text-right {
+  float: right;
+}
+
+#footer .footer-text .footer-text-right .mark a {
+  font-size: 12px;
+  color: #333;
+  margin-left: 45px;
+  padding-right: 10px;
+  background: url(../img/f-arrow.png) no-repeat right center;
+}
+
+#footer .footer-text .footer-text-right .fservice {
+  font-size: 12px;
+  color: #999;
+  margin-top: 10px;
 }
 /*# sourceMappingURL=style.css.map */
