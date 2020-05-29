@@ -544,6 +544,16 @@ body {
   float: left;
 }
 
+#con4 .event .swiper-container .wiper-wrapper .swiper-pagination {
+  position: relative;
+}
+
+#con4 .event .swiper-container .wiper-wrapper .swiper-pagination.swiper-pagination-white {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
 #con4 .event .box {
   float: left;
   width: 33.333333%;

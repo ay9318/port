@@ -544,7 +544,12 @@ body {
                 .swiper-slide {
                     img {}
                 }
-                .swiper-pagination.swiper-pagination-white {}
+                .swiper-pagination {
+                    position: relative;
+                }
+                .swiper-pagination.swiper-pagination-white {
+                    position: absolute; left: 0; bottom: 0;
+                }
             }            
         }
         .box {
