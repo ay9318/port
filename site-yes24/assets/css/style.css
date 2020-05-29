@@ -924,6 +924,7 @@ body {
 /* footer */
 #footer {
   clear: both;
+  margin-bottom: 50px;
 }
 
 #footer .footer-menu {
@@ -966,6 +967,10 @@ body {
 #footer .footer-menu .footer-menu-btn {
   border: 1px solid #999;
   float: right;
+}
+
+#footer .footer-menu .footer-menu-btn ul {
+  height: 28px;
 }
 
 #footer .footer-menu .footer-menu-btn ul li {
