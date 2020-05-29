@@ -144,11 +144,38 @@ body {
 }
 
 #main #banner {
-  margin-bottom: 30px;
+  margin-bottom: 80px;
 }
 
-#main #banner .banner .swiper-container .swiper-scrollbar ul {
-  display: none;
+#main #banner .banner .swiper-container .swiper-wrapper .swiper-slide a {
+  position: relative;
+}
+
+#main #banner .banner .swiper-container .swiper-wrapper .swiper-slide a .text {
+  position: absolute;
+  left: 500px;
+  top: 180px;
+  color: #fff;
+  line-height: 1.3;
+}
+
+#main #banner .banner .swiper-container .swiper-wrapper .swiper-slide a .text p {
+  font-size: 25px;
+}
+
+#main #banner .banner .swiper-container .swiper-wrapper .swiper-slide a .text .big {
+  font-size: 80px;
+  font-weight: 400;
+}
+
+#main #banner .banner .swiper-container .swiper-wrapper .swiper-slide a .text span {
+  font-size: 16px;
+}
+
+#main #banner .banner .swiper-container .swiper-scrollbar-drag {
+  max-width: 70px;
+  height: 5px;
+  border-radius: 0;
 }
 
 /* contents */
@@ -414,36 +441,37 @@ body {
   margin-bottom: 20px;
 }
 
-#con3 .ranking .tab a {
+#con3 .ranking .tab ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#con3 .ranking .tab ul li.on a.tt {
+  color: #ec7d2c;
+}
+
+#con3 .ranking .tab ul li {
+  -ms-flex-preferred-size: content;
+      flex-basis: content;
+}
+
+#con3 .ranking .tab ul li a.tt {
+  font-size: 18px;
+  padding: 0 30px;
+}
+
+#con3 .ranking .tab ul li a.tt:hover {
+  color: #ec7d2c;
+}
+
+#con3 .ranking .tab ul li .big-box a {
   font-size: 18px;
   padding: 0 15px;
   color: #555;
 }
 
-#con3 .ranking .tab ahover {
-  color: #ec7d2c;
-}
-
-#con3 .ranking .tab a.on {
-  color: #ec7d2c;
-}
-
-#con3 .ranking .rank-box {
-  position: relative;
-  width: 100%;
-}
-
-#con3 .ranking .rank-box .rank-list {
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-#con3 .ranking .rank-box .rank-list li a .box {
+#con3 .ranking .tab ul li .big-box a .box {
   overflow: hidden;
   position: relative;
   margin: 20px;
@@ -452,21 +480,21 @@ body {
   background: #ccc;
 }
 
-#con3 .ranking .rank-box .rank-list li a .box svg {
-  width: 456px;
-  height: 504px;
+#con3 .ranking .tab ul li .big-box a .box svg {
+  width: 470px;
+  height: 520px;
   margin-top: -40px;
   margin-left: -50px;
-  -webkit-transition: all 0.8s ease;
-  transition: all 0.8s ease;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
 }
 
-#con3 .ranking .rank-box .rank-list li a .box svg:hover {
+#con3 .ranking .tab ul li .big-box a .box svg:hover {
   -webkit-transform: scale(1.2, 1.2);
           transform: scale(1.2, 1.2);
 }
 
-#con3 .ranking .rank-box .rank-list li a .box img {
+#con3 .ranking .tab ul li .big-box a .box img {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -476,23 +504,23 @@ body {
   height: 280px;
 }
 
-#con3 .ranking .rank-box .rank-list li a .text {
+#con3 .ranking .tab ul li .big-box a .text {
   text-align: center;
   position: relative;
   padding-bottom: 20px;
 }
 
-#con3 .ranking .rank-box .rank-list li a .text p {
+#con3 .ranking .tab ul li .big-box a .text p {
   font-size: 14px;
   font-weight: bold;
 }
 
-#con3 .ranking .rank-box .rank-list li a .text span {
+#con3 .ranking .tab ul li .big-box a .text span {
   font-size: 13px;
   color: #999;
 }
 
-#con3 .ranking .rank-box .rank-list li a .text::before {
+#con3 .ranking .tab ul li .big-box a .text::before {
   content: '';
   position: absolute;
   right: 20px;
@@ -502,11 +530,11 @@ body {
   background: #ccc;
 }
 
-#con3 .ranking .rank-box .rank-list li a .rank-num {
+#con3 .ranking .tab ul li .big-box a .rank-num {
   position: relative;
 }
 
-#con3 .ranking .rank-box .rank-list li a .rank-num p {
+#con3 .ranking .tab ul li .big-box a .rank-num p {
   position: absolute;
   left: 30px;
   top: -110px;
@@ -519,7 +547,7 @@ body {
   background: #ec7d2c;
 }
 
-#con3 .ranking .rank-box .more {
+#con3 .ranking .more {
   position: absolute;
   left: 41%;
   top: 490px;
@@ -571,8 +599,7 @@ body {
 /* sbanner02 */
 .sbanner02 {
   position: relative;
-  width: 100%;
-  min-width: 1300px;
+  width: auto;
   height: 560px;
   background: #000;
   margin: 80px 0px;
@@ -637,7 +664,7 @@ body {
 .sbanner02 img {
   position: relative;
   position: absolute;
-  right: 11%;
+  left: 38%;
   top: 0;
   width: 981px;
   height: 560px;
@@ -924,17 +951,20 @@ body {
 /* footer */
 #footer {
   clear: both;
+  margin-bottom: 30px;
 }
 
 #footer .footer-menu {
+  position: relative;
   border-bottom: 1px solid #f6f6f6;
   padding-bottom: 20px;
   margin: 30px 0;
-  overflow: hidden;
 }
 
-#footer .footer-menu .footer-menu-text {
-  float: left;
+#footer .footer-menu .footer-menu-text ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 #footer .footer-menu .footer-menu-text ul li {
@@ -964,21 +994,29 @@ body {
 }
 
 #footer .footer-menu .footer-menu-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
   border: 1px solid #999;
-  float: right;
+}
+
+#footer .footer-menu .footer-menu-btn ul {
+  position: relative;
+  z-index: 1000;
 }
 
 #footer .footer-menu .footer-menu-btn ul li {
+  background: #fff;
   padding: 0px 50px 0px 10px;
-  margin-bottom: 1px;
 }
 
 #footer .footer-menu .footer-menu-btn ul li a {
+  width: 110px;
+  line-height: 1.8;
   position: relative;
   display: block;
   font-size: 13px;
   color: #666;
-  height: 24px;
 }
 
 #footer .footer-menu .footer-menu-btn ul li a img {
@@ -987,15 +1025,27 @@ body {
   top: 8px;
 }
 
-#footer .footer-menu .footer-menu-btn ul li:first-child {
+#footer .footer-menu .footer-menu-btn ul .family-btn {
   cursor: pointer;
-  border-bottom: 1px solid #999;
 }
 
-#footer .footer-menu .footer-menu-btn ul li:first-child a {
+#footer .footer-menu .footer-menu-btn ul .family-btn.on {
+  border-bottom: 1px solid #ddd;
+}
+
+#footer .footer-menu .footer-menu-btn ul .family-btn.on img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  position: absolute;
+  right: -40px;
+  top: 8px;
+}
+
+#footer .footer-menu .footer-menu-btn ul li.family-btn a {
   font-size: 16px;
   color: #000;
   height: 28px;
+  line-height: 2;
 }
 
 #footer .footer-text {
