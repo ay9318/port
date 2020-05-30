@@ -1,13 +1,232 @@
+@font-face { font-family: 'NanumBarunGothic'; font-style: normal; font-weight: 400; src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot'); src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype'); } @font-face { font-family: 'NanumBarunGothic'; font-style: normal; font-weight: 700; src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot'); src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype') } @font-face { font-family: 'NanumBarunGothic'; font-style: normal; font-weight: 300; src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot'); src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype'); } .nanumbarungothic * { font-family: 'NanumBarunGothic', sans-serif; }
+
 body {
     font-family : 'NanumBarunGothic', '맑은 고딕', 'Malgun Gothic', sans-serif;
 }
 
-#wrap {}
+/* side-menu */
+#side-menu {
+   position: fixed;
+   left: -300px; top: 0;
+   background: rgba(0, 0, 0, 0.8);
+   width: 15%;
+   height: 100%;
+   z-index: 10000;
+    .top {
+        position: relative;
+        width: 100%;
+        height: 100px;
+        background: #000;
+        a {            
+            .hi-ham {
+                position: relative;
+                .line1 {
+                    position: absolute;
+                    left: 23px;
+                    top: 43px;
+                    width: 22px;
+                    height: 2px;
+                    background: #fff;
+                }                
+                .line2 {
+                    position: absolute;
+                    left: 23px;
+                    top: 50px;
+                    width: 15px;
+                    height: 2px;
+                    background: #fff;
+                }
+                .line3 {
+                    position: absolute;
+                    left: 23px;
+                    top: 57px;
+                    width: 22px;
+                    height: 2px;
+                    background: #fff;
+                }                         
+            }
+        }
+        .exit {
+            background: #000 url(../img/close.png)
+            no-repeat;
+            position: absolute;
+            right: 0; top: 0;
+        }
+    }
+    .side-box {
+        padding-left: 20px;         
+            ul {
+                li {
+                    a {
+                        font-weight: bold;
+                        display: block;
+                        font-size: 16px;
+                        padding: 8px 0;
+                        color: #fff;
+                    }
+                    ul.sub-menu {
+                        display: none;
+                        li {
+                            a {
+                                font-size: 13px;
+                                color: #999;
+                                &:hover {
+                                    color: #fff;   
+                                    &::after {
+                                        content: '';
+                                        position: absolute;
+                                        left: 55px; top: 10px;
+                                        border-left: 5px solid #fff;
+                                        border-top: 4px solid transparent;
+                                        border-bottom: 4px solid transparent;
+                                    }
+                                } 
+                            }                        
+                        }
+                    }
+                }
+            }
+        div {
+            ul.kategorie {
+                text-align: center;
+                width: 80%;
+                margin: 20px 0 0px;
+                padding: 18px 0;
+                border-top: 1px solid #484848;
+                border-bottom: 1px solid #484848;
+                li {
+                    display: inline;
+                    position: relative;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0; top: 0;
+                        width: 1px;
+                        height: 13px;
+                        background: #484848;
+                    }
+                    a {
+                        display: inline-block;
+                        padding: 0 5px;
+                        font-size: 13px;
+                        color: #999;
+                        font-weight: 500;
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
+                }
+                li:first-child::before {
+                    width: 0;
+                    height: 0;
+                }    
+            }
+        }
+        div {
+            ul.service {
+                width: 80%;
+                padding: 10px 0;
+                border-bottom: 1px solid #484848;
+                li {
+                    a {
+                        position: relative;   
+                        font-weight: 600;
+                        font-size: 13px;
+                        padding: 5px 0;
+                        &:hover {                 
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                left: 55px; top: 10px;
+                                border-left: 5px solid #fff;
+                                border-top: 4px solid transparent;
+                                border-bottom: 4px solid transparent;
+                            }
+                        } 
+                    }
+                }
+                li:nth-child(2) a {
+                    &:hover {                 
+                        &::after {
+                            left: 40px;
+                        }
+                    }
+                }
+            }
+            ul.my {
+                margin: 10px 0;
+                li { 
+                    a {
+                        display: block;
+                        padding: 5px 0;
+                        font-size: 13px;
+                    }
+                    ul {
+                        li {
+                            a {
+                                position: relative;
+                                font-size: 13px;
+                                color: #999;
+                                font-weight: 500;
+                                &:hover {                                
+                                    color: #fff;
+                                    &::after {
+                                        content: '';
+                                        position: absolute;
+                                        left: 93px; top: 10px;
+                                        border-left: 5px solid #fff;
+                                        border-top: 4px solid transparent;
+                                        border-bottom: 4px solid transparent;
+                                    }
+                                }                            
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        p {
+            color: #fff;
+        }
+        div.box {
+            margin: 15px 0 30px 22px;
+            padding: 0;
+            width: 130px;
+            height: 140px;
+            background: #222;
+            color: #999;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px; 
+        }
+        .button {
+            margin-left: 25px;
+            a {
+                width: 50%;
+                margin: 5px 0;
+                display: block;
+                border: 1px solid #858585;
+                padding: 8px 15px;
+                text-align: center;
+                color: #999;
+                border-radius: 100px;
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }   
+    }
+}
 
+/* container */ 
 .container {
     width: 1200px;
     margin: 0 auto;
 }
+
+/* main */ 
 #main {
     position: relative;
     /* header */
@@ -22,10 +241,8 @@ body {
 
         .header {
             float: left;
-
             .ham {
                 position: relative;
-
                 .line1 {
                     position: absolute;
                     left: 10px;
@@ -51,9 +268,8 @@ body {
                     width: 15px;
                     height: 2px;
                     background: #fff;
-                }                         
+                }                      
             }
-
             .logo {
                 h1 {
                     position: absolute;
@@ -67,30 +283,31 @@ body {
                     }
                 }
             }
-        }
+        }        
 
         /* nav */
         .nav {
             float: right;
-            width: 60%;
+            width: 1200px;
+            height: 200px;
             position: relative;
-
+            overflow: hidden;
             .center-nav {
                 float: left;
                 margin-top: 10px;
                 position: absolute;
-                left: -30px;
                 top: 8px;
-
                 ul {
-                    li {
-                        padding-left: 20px;
+                    margin-left: 50px;
+                    li {                        
+                        padding-left: 18px;
                         display: inline;
 
                         a {
-                            font-size: 17px;
+                            font-size: 18px;
                             color: #fff;
                             font-weight: bold;
+                            padding-right: 10px;
                         }
                     }
                 }
@@ -98,61 +315,66 @@ body {
 
             .right-nav {
                 float: right;
-                margin-top: 23px;
-
-                .right {}
-
-                .right.nav {
-                    position: relative;
-
+                margin: 23px 10px 0 0;
+                position: relative;
+                .left {                   
                     ul {
                         position: absolute;
-                        left: -280px;
+                        left: -120px;
                         top: 0;
-
                         li {
                             display: inline;
-
                             a {
                                 padding-right: 25px;
                                 position: relative;
-                                font-size: 13px;
+                                font-size: 14px;
                                 color: #fff;
                                 font-weight: bold;
-
                                 &::before {
                                     content: '';
                                     width: 3px;
                                     height: 3px;
                                     position: absolute;
                                     left: -10px;
-                                    top: 8px;
+                                    top: 5px;
                                     background: #ec7d2c;
                                 }
                             }
                         }
                     }
                 }
-
-                .right.img {
-                    ul {
-                        li {
-                            padding-left: 10px;
-                            display: inline;
-
-                            input {}
-
-                            a {
-                                img {
-                                    width: 25px;
-                                }
-                            }
+                .right {
+                    float: right;
+                    display: flex;
+                    .search {
+                        margin-right: 18px;
+                        .text {
+                            font-size:15px;
+                            width: 340px;
+                            height: 20px;
+                            background: none;
+                            border: 0;
+                            border-bottom: 3px solid #fff;
+                        }
+                        .hidden {
+                            font-size:15px;
+                            width: 340px;
+                            height: 30px;
+                            background: #111;
+                            border: 0;
+                            border-bottom: 3px solid #000;
                         }
                     }
+                    .img {                        
+                        a{
+                            img {padding-left: 15px;}
+                        }
+                    }    
                 }
             }
         }
     }
+    
 
     /* banner */
     #banner {
@@ -439,6 +661,7 @@ body {
 
 /* ranking*/
 #con3 {
+    margin-bottom: 100px;
     .title {
         text-align: center;
         margin: 20px 0 30px;
@@ -447,93 +670,96 @@ body {
         }
     }
     .ranking {
+        position: relative;
         .tab {
             text-align: center;
             margin-bottom: 20px;
-            ul {
-                display: flex;
-                li.on a.tt {color: #ec7d2c;}
-                li {
-                    flex-basis: content;
-                    a.tt {
-                        font-size: 18px;
-                        padding: 0 30px;
-                    }
-                    a.tt:hover {color: #ec7d2c;}
-                    .big-box {
-                        a {
+            .tab-btn {
+                ul {
+                    li.on a {color: #ec7d2c;}
+                    li {
+                        display: inline;
+                        a{
                             font-size: 18px;
-                            padding: 0 15px;
-                            color: #555;                        
-                            .box {
-                                overflow: hidden;
-                                position: relative;
-                                margin: 20px;
-                                width: 380px;
-                                height: 350px;
-                                background: #ccc;
-                                svg {
-                                    width: 470px;
-                                    height: 520px;
-                                    margin-top: -40px;
-                                    margin-left: -50px;
-                                    transition: all 0.7s ease;
-                                }
-                                svg:hover {
-                                    transform: scale(1.2, 1.2);
-                                }
-                                img {
-                                    position: absolute;
-                                    left: 50%; top: 50%;
-                                    transform: translate(-50%, -50%);
-                                    width: 200px;
-                                    height: 280px;
-                                }
+                            padding: 0 30px;
+                            &:hover {color: #ec7d2c;}
+                        }
+                    }        
+                }         
+            }
+            .tab-cont {
+                display: flex;
+                #cont-box {
+                    margin: 0 auto;
+                    .cont {
+                        .box {
+                            overflow: hidden;
+                            position: relative;
+                            margin: 20px;
+                            width: 380px;
+                            height: 350px;
+                            background: #ccc;
+                            svg {
+                                width: 470px;
+                                height: 520px;
+                                margin-top: -40px;
+                                margin-left: -50px;
+                                transition: all 0.7s ease;
                             }
-                            .text {
-                                text-align: center;
-                                position: relative;
-                                padding-bottom: 20px;
-                                p {
-                                    font-size: 14px;
-                                    font-weight: bold;
-                                }
-                                span {
-                                    font-size: 13px;
-                                    color: #999;   
-                                }
-                                &::before {
-                                    content: '';
-                                    position: absolute;
-                                    right: 20px; bottom: -10px;
-                                    width: 390px;
-                                    height: 1px;
-                                    background: #ccc;
-                                }
+                            svg:hover {
+                                transform: scale(1.2, 1.2);
                             }
-                            .rank-num {
-                                position: relative;
-                                p {
-                                    position: absolute;
-                                    left: 30px; top: -110px;
-                                    text-align: center;
-                                    line-height: 45px;
-                                    font-size: 16px;
-                                    color: #fff;
-                                    width: 45px;
-                                    height: 45px;
-                                    background: #ec7d2c; 
-                                }
+                            img {
+                                position: absolute;
+                                left: 50%; top: 50%;
+                                transform: translate(-50%, -50%);
+                                width: 200px;
+                                height: 280px;
                             }
                         }
-                    }                    
-                }               
+                        .text {
+                            text-align: center;
+                            position: relative;
+                            padding-bottom: 20px;
+                            p {
+                                font-size: 14px;
+                                font-weight: bold;
+                            }
+                            span {
+                                font-size: 13px;
+                                color: #999;   
+                            }
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                right: 20px; bottom: -10px;
+                                width: 390px;
+                                height: 1px;
+                                background: #ccc;
+                            }
+                        }
+                        .rank-num {
+                            position: relative;
+                            p {
+                                position: absolute;
+                                left: 30px; top: -110px;
+                                text-align: center;
+                                line-height: 45px;
+                                font-size: 16px;
+                                color: #fff;
+                                width: 45px;
+                                height: 45px;
+                                background: #ec7d2c; 
+                            }
+                        }
+                    }
+                }                
             }
         }
         .more {
             position: absolute;
             left: 41%;
-            top: 490px;
+            bottom: -80px;
             border: 1px solid #ccc;
             padding: 15px 50px;
             font-size: 14px;
@@ -542,11 +768,7 @@ body {
 }
 
 #con4 {
-    margin: 5% 0;
-    
-    .container {
-        
-    }
+    margin: 200px 0 100px;
     .event {
         box-sizing: border-box;
         overflow: hidden;

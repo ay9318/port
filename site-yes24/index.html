@@ -11,24 +11,124 @@
     <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="assets/css/swiper.min.css">
 
-
     <!-- favicon -->
     <link rel="icon" href="assets/icon/favicon.ico">
 </head>
 <body>
+    <div id="side-menu">
+        <div class="top">
+            <a href="#">
+                <div class="hi-ham">
+                    <span class="line1"></span>
+                    <span class="line2"></span>
+                    <span class="line3"></span>
+            </div>
+            </a>
+            <a href="#" class="exit">
+            </a>
+        </div> 
+        <!--//top -->
+        <div class="side-box">
+            <ul>
+                <li><a href="#">콘서트</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">- 전체보기</a></li>
+                        <li><a href="#">- 국내뮤지션</a></li>
+                        <li><a href="#">- 해외뮤지션</a></li>
+                        <li><a href="#">- 페스티벌</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">뮤지컬</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">- 전체보기</a></li>
+                        <li><a href="#">- 라이선스</a></li>
+                        <li><a href="#">- 오리지널</a></li>
+                        <li><a href="#">- 창작</a></li>
+                        <li><a href="#">- 넌버벌 퍼포먼스</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">연극</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">- 전체보기</a></li>
+                        <li><a href="#">- 대학로</a></li>
+                        <li><a href="#">- 기타지역</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">클래식/국악/무용</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">- 전체보기</a></li>
+                        <li><a href="#">- 클래식</a></li>
+                        <li><a href="#">- 발레/무용</a></li>
+                        <li><a href="#">- 국악</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">전시/행사</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">- 전체보기</a></li>
+                        <li><a href="#">- 전시</a></li>
+                        <li><a href="#">- 체험/행사</a></li>
+                        <li><a href="#">- 워터파크/스파</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">아동/가족</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">- 전체보기</a></li>
+                        <li><a href="#">- 뮤지컬</a></li>
+                        <li><a href="#">- 연극</a></li>
+                        <li><a href="#">- 기타</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div>
+                <ul class="kategorie">
+                    <li><a href="#">랭킹</a></li>
+                    <li><a href="#" class="border">지역별</a></li>
+                    <li><a href="#">공연장</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="service">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">읽을거리</a></li>
+                    <li><a href="#">이용안내</a></li>
+                </ul>
+                <ul class="my">
+                    <li><a href="#">MY티켓</a>
+                        <ul>
+                            <li><a href="#">- 예매확인/취소</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <p>최근 본 상품</p>
+            <div class="box">
+                최근 본 공연<br>
+                정보가<br>
+                없습니다.
+            </div>
+            <div class="button">
+                <a href="#">MD#</a>
+                <a href="#">GLOBAL</a>
+            </div>        
+        </div>
+        <!--//side-box -->
+    </div>
+    <!--//side-menu -->
+
     <div id="wrap">
         <div id="main">
             <header id="header">
-                <div class="header">
-                    <div class="ham">
+                 <div class="header">
+                    <a href="#" class="ham">
                         <span class="line1"></span>
                         <span class="line2"></span>
                         <span class="line3"></span>
-                    </div>
+                    </a>
                     <div class="logo">
                         <h1><a href="index.html"><img src="assets/img/logo.png" alt="YES24"></a></h1>
                     </div>
-                </div>            
+                </div>         
                 <nav class="nav">
                     <div class="center-nav">
                         <ul>
@@ -42,20 +142,22 @@
                     </div>
                     <!-- //center-nav -->     
                     <div class="right-nav">
-                        <div class="right nav">
+                        <div class="left">
                             <ul>
                                 <li><a href="#">랭킹</a></li>
                                 <li><a href="#">이벤트</a></li>
                             </ul>
                         </div>
-                        <div class="right img">
-                            <ul>
-                                <li><input type="text"></li>
-                                <li>  
-                                    <a href="#"><img src="assets/img/pf-srch.png" alt="검색"></a></li>
-                                <li> <a href="#"><img src="assets/img/pf-ticket-w.png" alt="MY티켓"></a></li>
-                                <li>    <a href="#"><img src="assets/img/pf-global-w.png" alt="GLOBAL"></a></li>
-                                </ul>      
+                        <div class="right">
+                            <div class="search">
+                                <input type="text" class="text">
+                                <input type="hidden" class="hidden">
+                                <a href="#"><img src="assets/img/pf-srch.png" alt="검색"></a>          
+                            </div>
+                            <div class="img">
+                                <a href="#"><img src="assets/img/pf-ticket-w.png" alt="MY티켓"></a>
+                                <a href="#"><img src="assets/img/pf-global-w.png" alt="GLOBAL"></a>
+                            </div>
                         </div>
                     </div>
                     <!-- //right-nav-->     
@@ -317,141 +419,116 @@
                         </div>
                         <div class="ranking">
                             <div class="tab">
-                                <ul>
-                                    <li class="on">
-                                        <a href="#" class="tt">#뮤지컬</a>
-                                        <div class="big-box">
-                                            <a href="#">
-                                                <div class="box">
-                                                    <svg class="bg-img">
-                                                        <filter id="svgFilter">
-                                                            <feGaussianBlur id="svgGaussBlur" in="SourceGraphic" stdDeviation="7"></feGaussianBlur>
-                                                            <feComponentTransfer>
-                                                                <feFuncA type="discrete" tableValues="1 1"></feFuncA>
-                                                            </feComponentTransfer>
-                                                        </filter>
-                                                        <image xlink:href="http://tkfile.yes24.com/upload2/perfblog/202005/20200525/20200525-angel_new_36651.jpg/dims/quality/70/" filter="url(#svgFilter)" width="100%" height="100%" x="0" y="0"></image>
-                                                    </svg>
-                                                    <img src="assets/img/ranking_M01.jpg" alt="미드나잇:액터뮤지션">
-                                                </div>
-                                                <div class="text">
-                                                    <p>뮤지컬 &lt;미드나잇 : 액터뮤지션&gt;</p>
-                                                    <span>2020.04.11 ~ 2020.07.05 예스24스테이지 3관</span>
-                                                </div>
-                                                <div class="rank-num">
-                                                    <p>1위</p>
-                                                </div>
-                                            </a>
+                                <div class="tab-btn">
+                                    <ul>
+                                        <li class="on"><a href="#">#뮤지컬</a></li>
+                                        <li><a href="#">#콘서트</a></li>
+                                        <li><a href="#">#연극</a></li>
+                                        <li><a href="#">#클래식</a></li>
+                                        <li><a href="#">#전시</a></li>
+                                    </ul>  
+                                </div>
+                                <!-- //tab-btn -->
+                                <div class="tab-cont">
+                                    <div id="cont-box">
+                                        <div class="cont">
+                                            <div class="box">
+                                                <svg class="bg-img">
+                                                    <filter id="svgFilter">
+                                                        <feGaussianBlur id="svgGaussBlur" in="SourceGraphic" stdDeviation="7"></feGaussianBlur>
+                                                        <feComponentTransfer>
+                                                            <feFuncA type="discrete" tableValues="1 1"></feFuncA>
+                                                        </feComponentTransfer>
+                                                    </filter>
+                                                    <image xlink:href="http://tkfile.yes24.com/upload2/perfblog/202005/20200525/20200525-angel_new_36651.jpg/dims/quality/70/" filter="url(#svgFilter)" width="100%" height="100%" x="0" y="0"></image>
+                                                </svg>
+                                                <img src="assets/img/ranking_M01.jpg" alt="미드나잇:액터뮤지션">
+                                            </div>
+                                            <div class="text">
+                                                <p>뮤지컬 &lt;미드나잇 : 액터뮤지션&gt;</p>
+                                                <span>2020.04.11 ~ 2020.07.05 예스24스테이지 3관</span>
+                                            </div>
+                                            <div class="rank-num">
+                                                <p>1위</p>
+                                            </div>
                                         </div>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="tt">#콘서트</a>
-                                        <div class="big-box">
-                                            <a href="#">
-                                                <div class="box">
-                                                    <svg class="bg-img">
-                                                        <filter id="svgFilter">
-                                                            <feGaussianBlur id="svgGaussBlur" in="SourceGraphic" stdDeviation="7"></feGaussianBlur>
-                                                            <feComponentTransfer>
-                                                                <feFuncA type="discrete" tableValues="1 1"></feFuncA>
-                                                            </feComponentTransfer>
-                                                        </filter>
-                                                        <image xlink:href="http://tkfile.yes24.com/upload2/perfblog/202005/20200525/20200525-angel_new_36651.jpg/dims/quality/70/" filter="url(#svgFilter)" width="100%" height="100%" x="0" y="0"></image>
-                                                    </svg>
-                                                    <img src="assets/img/ranking_M01.jpg" alt="미드나잇:액터뮤지션">
-                                                </div>
-                                                <div class="text">
-                                                    <p>뮤지컬 &lt;미드나잇 : 액터뮤지션&gt;</p>
-                                                    <span>2020.04.11 ~ 2020.07.05 예스24스테이지 3관</span>
-                                                </div>
-                                                <div class="rank-num">
-                                                    <p>1위</p>
-                                                </div>
-                                            </a>
-                                        </div>                 
-                                    </li>
-                                    <li>
-                                        <a href="#" class="tt">#연극</a>
-                                        <div class="big-box">
-                                            <a href="#">
-                                                <div class="box">
-                                                    <svg class="bg-img">
-                                                        <filter id="svgFilter">
-                                                            <feGaussianBlur id="svgGaussBlur" in="SourceGraphic" stdDeviation="7"></feGaussianBlur>
-                                                            <feComponentTransfer>
-                                                                <feFuncA type="discrete" tableValues="1 1"></feFuncA>
-                                                            </feComponentTransfer>
-                                                        </filter>
-                                                        <image xlink:href="http://tkfile.yes24.com/upload2/perfblog/202005/20200525/20200525-angel_new_36651.jpg/dims/quality/70/" filter="url(#svgFilter)" width="100%" height="100%" x="0" y="0"></image>
-                                                    </svg>
-                                                    <img src="assets/img/ranking_M01.jpg" alt="미드나잇:액터뮤지션">
-                                                </div>
-                                                <div class="text">
-                                                    <p>뮤지컬 &lt;미드나잇 : 액터뮤지션&gt;</p>
-                                                    <span>2020.04.11 ~ 2020.07.05 예스24스테이지 3관</span>
-                                                </div>
-                                                <div class="rank-num">
-                                                    <p>1위</p>
-                                                </div>
-                                            </a>
+                                        <!-- //cont -->
+                                        <div class="cont">
+                                            <div class="box">
+                                                <svg class="bg-img">
+                                                    <filter id="svgFilter">
+                                                        <feGaussianBlur id="svgGaussBlur" in="SourceGraphic" stdDeviation="7"></feGaussianBlur>
+                                                        <feComponentTransfer>
+                                                            <feFuncA type="discrete" tableValues="1 1"></feFuncA>
+                                                        </feComponentTransfer>
+                                                    </filter>
+                                                    <image xlink:href="http://tkfile.yes24.com/upload2/perfblog/202005/20200525/20200525-angel_new_36651.jpg/dims/quality/70/" filter="url(#svgFilter)" width="100%" height="100%" x="0" y="0"></image>
+                                                </svg>
+                                                <img src="assets/img/ranking_M01.jpg" alt="미드나잇:액터뮤지션">
+                                            </div>
+                                            <div class="text">
+                                                <p>뮤지컬 &lt;미드나잇 : 액터뮤지션&gt;</p>
+                                                <span>2020.04.11 ~ 2020.07.05 예스24스테이지 3관</span>
+                                            </div>
+                                            <div class="rank-num">
+                                                <p>1위</p>
+                                            </div>
                                         </div>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="tt">#클래식</a>
-                                        <div class="big-box">
-                                            <a href="#">
-                                                <div class="box">
-                                                    <svg class="bg-img">
-                                                        <filter id="svgFilter">
-                                                            <feGaussianBlur id="svgGaussBlur" in="SourceGraphic" stdDeviation="7"></feGaussianBlur>
-                                                            <feComponentTransfer>
-                                                                <feFuncA type="discrete" tableValues="1 1"></feFuncA>
-                                                            </feComponentTransfer>
-                                                        </filter>
-                                                        <image xlink:href="http://tkfile.yes24.com/upload2/perfblog/202005/20200525/20200525-angel_new_36651.jpg/dims/quality/70/" filter="url(#svgFilter)" width="100%" height="100%" x="0" y="0"></image>
-                                                    </svg>
-                                                    <img src="assets/img/ranking_M01.jpg" alt="미드나잇:액터뮤지션">
-                                                </div>
-                                                <div class="text">
-                                                    <p>뮤지컬 &lt;미드나잇 : 액터뮤지션&gt;</p>
-                                                    <span>2020.04.11 ~ 2020.07.05 예스24스테이지 3관</span>
-                                                </div>
-                                                <div class="rank-num">
-                                                    <p>1위</p>
-                                                </div>
-                                            </a>
-                                        </div>    
-                                    </li>
-                                    <li>
-                                        <a href="#" class="tt">#전시</a>
-                                        <div class="big-box">
-                                            <a href="#">
-                                                <div class="box">
-                                                    <svg class="bg-img">
-                                                        <filter id="svgFilter">
-                                                            <feGaussianBlur id="svgGaussBlur" in="SourceGraphic" stdDeviation="7"></feGaussianBlur>
-                                                            <feComponentTransfer>
-                                                                <feFuncA type="discrete" tableValues="1 1"></feFuncA>
-                                                            </feComponentTransfer>
-                                                        </filter>
-                                                        <image xlink:href="http://tkfile.yes24.com/upload2/perfblog/202005/20200525/20200525-angel_new_36651.jpg/dims/quality/70/" filter="url(#svgFilter)" width="100%" height="100%" x="0" y="0"></image>
-                                                    </svg>
-                                                    <img src="assets/img/ranking_M01.jpg" alt="미드나잇:액터뮤지션">
-                                                </div>
-                                                <div class="text">
-                                                    <p>뮤지컬 &lt;미드나잇 : 액터뮤지션&gt;</p>
-                                                    <span>2020.04.11 ~ 2020.07.05 예스24스테이지 3관</span>
-                                                </div>
-                                                <div class="rank-num">
-                                                    <p>1위</p>
-                                                </div>
-                                            </a>
+                                        <!-- //cont -->
+                                    </div>
+                                    <!-- //cont-box -->
+                                    <div id="cont-box">
+                                        <div class="cont">
+                                            <div class="box">
+                                                <svg class="bg-img">
+                                                    <filter id="svgFilter">
+                                                        <feGaussianBlur id="svgGaussBlur" in="SourceGraphic" stdDeviation="7"></feGaussianBlur>
+                                                        <feComponentTransfer>
+                                                            <feFuncA type="discrete" tableValues="1 1"></feFuncA>
+                                                        </feComponentTransfer>
+                                                    </filter>
+                                                    <image xlink:href="http://tkfile.yes24.com/upload2/perfblog/202005/20200525/20200525-angel_new_36651.jpg/dims/quality/70/" filter="url(#svgFilter)" width="100%" height="100%" x="0" y="0"></image>
+                                                </svg>
+                                                <img src="assets/img/ranking_M01.jpg" alt="미드나잇:액터뮤지션">
+                                            </div>
+                                            <div class="text">
+                                                <p>뮤지컬 &lt;미드나잇 : 액터뮤지션&gt;</p>
+                                                <span>2020.04.11 ~ 2020.07.05 예스24스테이지 3관</span>
+                                            </div>
+                                            <div class="rank-num">
+                                                <p>1위</p>
+                                            </div>
                                         </div>
-                                    </li>
-                                </ul>
+                                        <!-- //cont -->
+                                        <div class="cont">
+                                            <div class="box">
+                                                <svg class="bg-img">
+                                                    <filter id="svgFilter">
+                                                        <feGaussianBlur id="svgGaussBlur" in="SourceGraphic" stdDeviation="7"></feGaussianBlur>
+                                                        <feComponentTransfer>
+                                                            <feFuncA type="discrete" tableValues="1 1"></feFuncA>
+                                                        </feComponentTransfer>
+                                                    </filter>
+                                                    <image xlink:href="http://tkfile.yes24.com/upload2/perfblog/202005/20200525/20200525-angel_new_36651.jpg/dims/quality/70/" filter="url(#svgFilter)" width="100%" height="100%" x="0" y="0"></image>
+                                                </svg>
+                                                <img src="assets/img/ranking_M01.jpg" alt="미드나잇:액터뮤지션">
+                                            </div>
+                                            <div class="text">
+                                                <p>뮤지컬 &lt;미드나잇 : 액터뮤지션&gt;</p>
+                                                <span>2020.04.11 ~ 2020.07.05 예스24스테이지 3관</span>
+                                            </div>
+                                            <div class="rank-num">
+                                                <p>1위</p>
+                                            </div>
+                                        </div>
+                                        <!-- //cont -->
+                                    </div>
+                                    <!-- //cont-box -->
+                                </div>
+                                <!-- //tab-cont -->
                             </div>
                             <!--//tab -->                          
-                                <a  href="#" class="more">랭킹 더보기 +</a>                                             
+                            <a  href="#" class="more">랭킹 더보기 +</a>    
                         </div>
                         <!-- //ranking -->
                     </div>
@@ -801,7 +878,15 @@
     <script src="assets/js/jquery.min_1.12.4.js"></script>
     <script src="assets/js/swiper.min.js"></script>
     <script>
-    //배너 스와이프
+    //히든 사이드 메뉴
+    $(".header .ham").click(function(){
+        $("#side-menu").animate({"left":"0"}, 600);
+    });
+    $("#side-menu .hi-ham").click(function(){        
+        $("#side-menu").animate({"left":"-300"}, 600);
+    });
+
+    //배너 스와이프 
     var swiper = new Swiper('.banner .swiper-container', {
         scrollbar: {
             el: '.swiper-scrollbar',
@@ -818,16 +903,17 @@
       keyboard: true,
     });
 
-    //탭 메뉴
-    $(".tab").find("ul > li > div").hide();
-    $(".tab").find("ul > li.on > div").show();
+    //탭 메뉴 
+    let tabCont =  $(".tab-cont > #cont-box");
 
-    function show(){
-        let target = $(this);
+    tabCont.hide().eq(0).show();
 
-        target.next().show().parent("li").addClass("on").siblings("li").removeClass("on").find("div").hide();
-    }
-    $(".tab").find("ul > li > div").click(show).focus(show);
+    // function show(){
+    //     let target = $(this);
+
+    //     target.next().show().parent("li").addClass("on").siblings("li").removeClass("on").find("div").hide();
+    // }
+    // $(".tab").find("ul > li > div").click(show).focus(show);
 
     //event swiper
     var swiper = new Swiper('.event .swiper-container', {
@@ -851,7 +937,8 @@
         prevEl: '.swiper-button-prev',
       },
     });
-    //패밀리 버튼
+
+    //패밀리 버튼 ok
     $(".footer-menu-btn .family").hide();
     $(".footer-menu-btn .family-btn a").click(function(e){
         e.preventDefault();
