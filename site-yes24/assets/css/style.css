@@ -49,11 +49,11 @@ body {
   background: #000;
 }
 
-#side-menu .top a .hi-ham {
+#side-menu .top .hi-ham a {
   position: relative;
 }
 
-#side-menu .top a .hi-ham .line1 {
+#side-menu .top .hi-ham a .line1 {
   position: absolute;
   left: 23px;
   top: 43px;
@@ -62,7 +62,7 @@ body {
   background: #fff;
 }
 
-#side-menu .top a .hi-ham .line2 {
+#side-menu .top .hi-ham a .line2 {
   position: absolute;
   left: 23px;
   top: 50px;
@@ -71,7 +71,7 @@ body {
   background: #fff;
 }
 
-#side-menu .top a .hi-ham .line3 {
+#side-menu .top .hi-ham a .line3 {
   position: absolute;
   left: 23px;
   top: 57px;
@@ -762,11 +762,11 @@ body {
   display: flex;
 }
 
-#con3 .ranking .tab .tab-cont #cont-box {
+#con3 .ranking .tab .tab-cont .cont-box {
   margin: 0 auto;
 }
 
-#con3 .ranking .tab .tab-cont #cont-box .cont .box {
+#con3 .ranking .tab .tab-cont .cont-box .box {
   overflow: hidden;
   position: relative;
   margin: 20px;
@@ -775,7 +775,7 @@ body {
   background: #ccc;
 }
 
-#con3 .ranking .tab .tab-cont #cont-box .cont .box svg {
+#con3 .ranking .tab .tab-cont .cont-box .box svg {
   width: 470px;
   height: 520px;
   margin-top: -40px;
@@ -784,12 +784,12 @@ body {
   transition: all 0.7s ease;
 }
 
-#con3 .ranking .tab .tab-cont #cont-box .cont .box svg:hover {
+#con3 .ranking .tab .tab-cont .cont-box .box svg:hover {
   -webkit-transform: scale(1.2, 1.2);
           transform: scale(1.2, 1.2);
 }
 
-#con3 .ranking .tab .tab-cont #cont-box .cont .box img {
+#con3 .ranking .tab .tab-cont .cont-box .box img {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -799,23 +799,23 @@ body {
   height: 280px;
 }
 
-#con3 .ranking .tab .tab-cont #cont-box .cont .text {
+#con3 .ranking .tab .tab-cont .cont-box .text {
   text-align: center;
   position: relative;
   padding-bottom: 20px;
 }
 
-#con3 .ranking .tab .tab-cont #cont-box .cont .text p {
+#con3 .ranking .tab .tab-cont .cont-box .text p {
   font-size: 14px;
   font-weight: bold;
 }
 
-#con3 .ranking .tab .tab-cont #cont-box .cont .text span {
+#con3 .ranking .tab .tab-cont .cont-box .text span {
   font-size: 13px;
   color: #999;
 }
 
-#con3 .ranking .tab .tab-cont #cont-box .cont .text::before {
+#con3 .ranking .tab .tab-cont .cont-box .text::before {
   content: '';
   position: absolute;
   right: 20px;
@@ -825,11 +825,11 @@ body {
   background: #ccc;
 }
 
-#con3 .ranking .tab .tab-cont #cont-box .cont .rank-num {
+#con3 .ranking .tab .tab-cont .cont-box .rank-num {
   position: relative;
 }
 
-#con3 .ranking .tab .tab-cont #cont-box .cont .rank-num p {
+#con3 .ranking .tab .tab-cont .cont-box .rank-num p {
   position: absolute;
   left: 30px;
   top: -110px;
@@ -1157,6 +1157,12 @@ body {
 
 #con8 .title img {
   width: 350px;
+}
+
+#con8 .swiper-container .swiper-wrapper .swiper-slide img {
+  display: block;
+  width: 840px;
+  height: 440px;
 }
 
 /* con9 */

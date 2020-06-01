@@ -17,8 +17,8 @@ body {
         width: 100%;
         height: 100px;
         background: #000;
-        a {            
-            .hi-ham {
+        .hi-ham {
+            a  {
                 position: relative;
                 .line1 {
                     position: absolute;
@@ -689,9 +689,9 @@ body {
             }
             .tab-cont {
                 display: flex;
-                #cont-box {
+                .cont-box {
                     margin: 0 auto;
-                    .cont {
+                   // .cont {
                         .box {
                             overflow: hidden;
                             position: relative;
@@ -752,7 +752,7 @@ body {
                                 background: #ec7d2c; 
                             }
                         }
-                    }
+                    //}
                 }                
             }
         }
@@ -1024,7 +1024,20 @@ body {
         img {
             width: 350px;
         }
-    }   
+    }
+    .swiper-container {
+        .swiper-wrapper {
+            .swiper-slide {                
+                img { 
+                    display: block;
+                    width: 840px;
+                    height: 440px;
+                }
+            }
+        }
+        .swiper-button-next {}
+        .swiper-button-prev {}
+    }
 }
 
 /* con9 */
