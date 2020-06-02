@@ -14,10 +14,9 @@
         img {width: 100%; vertical-align: top;}
         li {list-style: none;}
 
-        body {
-            background: #ccc;
-        }        
+        body {}        
         #nav {
+            display: flex;
             position: fixed; left: 0; top: 0; 
             width: 100%; background: #fff; 
             z-index: 1000; 
@@ -25,43 +24,160 @@
             font-family: "Roboto";
             padding: 0 7vw;            
         }
-        #nav .menu {position: relative;}
+        #nav .menu {
+            flex: 1 1 0;
+            }
         #nav .menu li {
-            display: inline; height: 100px; 
-            line-height: 100px; padding-right: 10px;
+            display: inline-block;
+            margin: 2.3vw 1vw 2.5vw 0;
         }
         #nav .menu li.active a {font-weight: bold;}
         #nav .menu a {color: #000; font-size: 14px;}
 
         #nav h1 {
-            position: absolute; left: 50%;
-            transform: translateX(-50%);
-            height: 100px; line-height: 100px; 
+            flex: 1 1 0;
             font-weight: 700; letter-spacing: 10px; 
             font-size: 14px; text-transform: uppercase;
+            text-align: center;
+            margin: 2.4vw 1vw;
         }
-        #nav .ham {cursor: pointer;}       
-        #nav .ham .bar {
-            position: relative;
-            width: 30px; height: 3px;
-            margin-top: 46px; 
-            background: #000;
+        #nav .ham {
+            flex: 1 1 0;
+            position: relative;    
         }       
-        #nav .ham .bar span{}       
-        #nav .ham .bar::before {
+        #nav .ham .bar {
+            position: absolute;
+            right: 0; top: 50%;
+            transform: translateY(-50%);
+            width: 50px; height: 50px;
+            cursor: pointer;
+        }       
+        #nav .ham .bar span{
+            width: 28px; height: 3px;
+            background: #000;
+            position: relative;
+            display: block;
+            transition: all 0.5s ease;
+            margin-top: 25px;
+            margin-left: 10px;
+        }       
+        #nav .ham .bar span::before {
             content: '';
             width: 50%; height: 3px;
             background: #000;
             position: absolute;
             left: 0; top: -10px;
+            transform-origin: left;
+            transition: all 0.5s ease;
         }       
-        #nav .ham .bar::after {
+        #nav .ham .bar span::after {
             content: '';
             width: 50%; height: 3px;
             background: #000;
             position: absolute;
             right: 0; bottom: -10px;
+            transform-origin: right;
+            transition: all 0.5s ease;
         }       
+        #nav .ham .bar.on span {transform: rotate(135deg);}
+        #nav .ham .bar.on span::before {top: 0; transform: translateX(100%) rotate(-90deg);}
+        #nav .ham .bar.on span::after {bottom: 0; transform: translateX(-100%) rotate(-90deg);}
+
+        /* slide-wrap */
+        .slide-wrap {position: relative; height: 100vh; overflow: hidden;}
+        .slide-img {width: 100%; height: 100%; position: relative;}
+        .slide-img .slide {position: absolute; width: 100%; height: 100%; overflow: hidden;}
+        .slide-img .slide .stext {
+            position: absolute; 
+            left: 50%; top: 50%; 
+            transform: translate(-50%, -50%) scale(0.8);
+            font-size: 7vw; color: #fff;
+            font-family: "Roboto";
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 700;
+            }
+        .slide-img .slide .simg {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+        .slide-img .slide .simg img {max-width: 500px;}
+        .slide-img .slide .snum {
+            position: absolute; left: 7.5vw; top: 11vh;
+            font-size: 5vw; color: #000;
+            font-family: "Playfair Display";
+            font-style: italic;
+        }
+        .slide-img .slide .snum .currentIndex {
+            margin-right: 4.5vw;
+            position: relative;
+        }
+        .slide-img .slide .snum .currentIndex::before {
+            content: '';
+            width: 4vw; height: 2px; background: #000;
+            position: absolute; right: -5.3vw; bottom: 3vw;
+        }       
+
+        /* slide-dot */
+        .slide-dot {
+            position: absolute; 
+            left: 50%; transform: translateX(-50%);
+            bottom: 0; width: 100%;
+            background: #fff;
+            text-align: center;
+        }
+        .slide-dot a {
+            color: #000;
+            display: inline-block;
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            margin: 2.8vw .8vw;
+            border: 1px solid #ccc;
+            text-indent: -9999px;
+            transition: all 0.3s ease;
+        }
+        .slide-dot a.active {
+            border: 3px; color: #333; text-indent: 0;
+            font-family: "Playfair Display";
+            font-style: italic;
+            vertical-align: 9px;
+            font-size: 18px;
+        }
+
+        /* slide-btn */
+        .slide-btn {}
+        .slide-btn a {position: absolute; top: 0; z-index: 2000;}
+        .slide-btn a.prev {left: 0; width: 5.2vw; height: 100vh; background: #fff;}
+        .slide-btn a.next {right: 0; width: 5.2vw; height: 100vh; background: #fff;}
+        .slide-btn a.prev::before {
+           content: '';
+           width: 10px; height: 2px; background: #000;
+           position: absolute; bottom: 3.2vw; left: 2.3vw;
+           border-radius: 10px;
+           transform: rotate(-45deg);
+           transform-origin: left;
+        }
+        .slide-btn a.prev::after {
+           content: '';
+           width: 10px; height: 2px; background: #000;
+           position: absolute; bottom: 3.2vw; left: 2.3vw;
+           border-radius: 10px;
+           transform: rotate(45deg);
+           transform-origin: left;
+        }        
+        .slide-btn a.next::before {
+            content: '';
+            width: 10px; height: 2px; background: #000;
+            position: absolute; bottom: 3.2vw; right: 2.4vw;
+            border-radius: 10px;
+            transform: rotate(-45deg);
+            transform-origin: right;
+        }
+        .slide-btn a.next::after {
+            content: '';
+            width: 10px; height: 2px; background: #000;
+            position: absolute; bottom: 3.2vw; right: 2.4vw;
+            border-radius: 10px;
+            transform: rotate(45deg);
+            transform-origin: right;
+        }
     </style>
 </head>
 <body>
@@ -84,29 +200,154 @@
         <div class="slide-wrap">
             <div class="slide-img">
                 <div class="slide s1">
-                    <!-- <div class="stext">
+                    <div class="stext">
                         <h2>webstandard</h2>
                     </div>
                     <div class="simg">
                         <img src="img/img1.png" alt="webstandard">
-                    </div> -->
+                    </div>
+                    <div class="snum">
+                        <span class="currentIndex">01</span>
+                        <span class="slideCount">07</span>
+                    </div>
                 </div>
-                <div class="slide s2"></div>
-                <div class="slide s3"></div>
-                <div class="slide s4"></div>
-                <div class="slide s5"></div>
-                <div class="slide s6"></div>
-                <div class="slide s7"></div> 
-            </div>
+                <div class="slide s2">
+                    <div class="stext">
+                        <h2>webstandard</h2>
+                    </div>
+                    <div class="simg">
+                        <img src="img/img2.png" alt="webstandard">
+                    </div>
+                    <div class="snum">
+                        <span class="currentIndex">02</span>
+                        <span class="slideCount">07</span>
+                    </div>
+                </div>
+                <div class="slide s3">
+                    <div class="stext">
+                        <h2>webstandard</h2>
+                    </div>
+                    <div class="simg">
+                        <img src="img/img3.png" alt="webstandard">
+                    </div>
+                    <div class="snum">
+                        <span class="currentIndex">03</span>
+                        <span class="slideCount">07</span>
+                    </div>
+                </div>
+                <div class="slide s4">
+                    <div class="stext">
+                        <h2>webstandard</h2>
+                    </div>
+                    <div class="simg">
+                        <img src="img/img4.png" alt="webstandard">
+                    </div>
+                    <div class="snum">
+                        <span class="currentIndex">04</span>
+                        <span class="slideCount">07</span>
+                    </div>
+                </div>
+                <div class="slide s5">
+                    <div class="stext">
+                        <h2>webstandard</h2>
+                    </div>
+                    <div class="simg">
+                        <img src="img/img1.png" alt="webstandard">
+                    </div>
+                    <div class="snum">
+                        <span class="currentIndex">05</span>
+                        <span class="slideCount">07</span>
+                    </div>
+                </div>
+                <div class="slide s6">
+                    <div class="stext">
+                        <h2>webstandard</h2>
+                    </div>
+                    <div class="simg">
+                        <img src="img/img2.png" alt="webstandard">
+                    </div>
+                    <div class="snum">
+                        <span class="currentIndex">06</span>
+                        <span class="slideCount">07</span>
+                    </div>
+                </div>
+                <div class="slide s7">
+                    <div class="stext">
+                        <h2>webstandard</h2>
+                    </div>
+                    <div class="simg">
+                        <img src="img/img3.png" alt="webstandard">
+                    </div>
+                    <div class="snum">
+                        <span class="currentIndex">07</span>
+                        <span class="slideCount">07</span>
+                    </div>
+                </div> 
+            </div>            
         </div>
     </section>
-
-
-
     <script src="js/jquery.min_1.12.4.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script>
+        //닷 버튼 생성
+        $(".slide-wrap").append("<div class='slide-dot'></div>")
+        $(".slide-wrap").append("<div class='slide-btn'><a href='#' class='prev'></a><a href='#' class='next'></a></div>")
 
+        const slideWrap = $(".slide-wrap"),
+                slideImg = $(".slide-img"),
+                slide = $(".slide"),
+                slideDot = $(".slide-dot"),
+                slideBtn = $(".slide-btn")
+
+        let slideCount = slide.length,    //슬라이드 이미지 갯수
+            currentIndex = 0,               //현재 보이는 이미지 순서
+            dotIndex = "",                   //닷 버튼 HTML
+            duration = 1000,                //이미지 슬라이드 이동시간
+            easing = "easeOutExpo";      //이미지 움직임 효과
+            slideBg = ["#fcefe9","#e9effd","#fae3f5","#fbe368","#ccebea","#e9effd","#f4f2ec"];  //각 슬라이드 배경색
+
+        //01. 각 이미지 absolute
+        // 첫번째 이미지는 left: 0 , 두번째 left 100%, 세번째 200% . . . . .
+        // 첫번째 이미지는 left: currentIndex , 두번째 left: currentIndex(1) * 100%, 세번째 left: currentIndex(2) * 200% . . . . .
+        //이미지 슬라이드
+        slide.each(function(index, element){
+            //console.log(element)
+            $(this).css({left : 100 * index + "%"})       //각 슬라이드 이미지 위치 설정
+
+            //이미지 갯수만큼 닷 버튼 만들기
+            dotIndex += "<a href='#'></a>"         //이미지 갯수만큼 닷 버튼 갯수 설정
+
+            //배경색 넣기
+            $(this).css({background : slideBg + index})
+        });
+        slideDot.html(dotIndex)                        //닷 버튼 출력
+        
+        //이미지 움직이기
+        function gotoSlide(num){
+            slideImg.animate({left : -100 * num +"%"}, duration, easing)   //duration과 easing을 변수로 사용
+            currentIndex = num;
+        }        
+        gotoSlide(0);
+
+        //버튼 클릭하기
+        slideBtn.on("click", "a", function(){
+            let nextIndex = (currentIndex +1) % slideCount;
+            let prevIndex = (currentIndex -1) % slideCount;
+            console.log(prevIndex) 
+
+            if(currentIndex == 0) prevIndex = slideCount -1
+          
+            if($(this).hasClass("prev")) {
+                gotoSlide(prevIndex)
+            } else {
+                gotoSlide(nextIndex)
+            }
+        });
+
+        //햄버거 메뉴
+        $("#nav .ham .bar").click(function(){
+            $(this).toggleClass("on")
+        });
     </script>
 </body>
 </html>
