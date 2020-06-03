@@ -353,20 +353,21 @@
 
             //$("#section1 .content-item-desc").html(split).attr("aria-label", txt);
 
-            $(".content-item-desc").each(function(){
+           /*  $(".content-item-desc").each(function(){
                 let txt = $(this).text();
                 let split = txt.split("").join("</span><span aria-hidden='true'>");
                     split = "<span aria-hidden='true'>" + split + "</span>";
                 $(this).html(split).attr("aria-lable",txt)
-            });
+            });  */
 
-            // //자바스크립트 한번에 - 숙제
-            // document.querySelector(".content-item-desc").forEach(function(){
-            //     let txt = document.querySelector(elem).html();
-            //     let split = txt.split("").join("</span><span aria-hidden='true'>");
-            //         split = "<span aria-hidden='true'>" + split + "</span>";
-            //         document.querySelector(elem).html(split).attr("aria-lable",txt)
-            // });
+            //자바스크립트 한번에 - 숙제
+            document.querySelectorAll(".content-item-desc").forEach(elem => {
+                let txt = elem.innerHTML;
+                let split = txt.split("").join("</span><span aria-hidden='true'>");
+                    split = "<span aria-hidden='true'>" + split + "</span>";
+                    //console.log(split)
+                elem.innerHTML= split.attr("aria-lable",txt)
+            });
 
             //패럴럭스 이펙트
             $(window).scroll(function() {
