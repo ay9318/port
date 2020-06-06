@@ -347,27 +347,27 @@
     <script src="js/gsap 3.3.0.min.js"></script>
     <script>
         //글자 하나 하나로 쪼개기
-        /*let txt = $("#section1 .content-item-desc").text();
+        let txt = $("#section1 .content-item-desc").text();
         let split = txt.split("").join("</span><span aria-hidden='true'>");
-            split = "<span>" + split + "</span>";*/
+            split = "<span>" + split + "</span>";
 
-            //$("#section1 .content-item-desc").html(split).attr("aria-label", txt);
+            $("#section1 .content-item-desc").html(split).attr("aria-label", txt);
 
-           /*  $(".content-item-desc").each(function(){
+            $(".content-item-desc").each(function(){
                 let txt = $(this).text();
                 let split = txt.split("").join("</span><span aria-hidden='true'>");
                     split = "<span aria-hidden='true'>" + split + "</span>";
                 $(this).html(split).attr("aria-lable",txt)
-            });  */
+            }); 
 
             //자바스크립트 한번에 - 숙제
-            document.querySelectorAll(".content-item-desc").forEach(elem => {
+           /*  document.querySelectorAll(".content-item-desc").forEach(elem => {
                 let txt = elem.innerHTML;
                 let split = txt.split("").join("</span><span aria-hidden='true'>");
                     split = "<span aria-hidden='true'>" + split + "</span>";
                     //console.log(split)
                 elem.innerHTML= split.attr("aria-lable",txt)
-            });
+            }); */
 
             //패럴럭스 이펙트
             $(window).scroll(function() {
