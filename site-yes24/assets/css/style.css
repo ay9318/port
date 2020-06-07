@@ -37,7 +37,7 @@ body {
   left: -300px;
   top: 0;
   background: rgba(0, 0, 0, 0.8);
-  width: 15%;
+  width: 13%;
   height: 100%;
   z-index: 10000;
 }
@@ -47,6 +47,30 @@ body {
   width: 100%;
   height: 100px;
   background: #000;
+}
+
+#side-menu .top .hi-ham {
+  position: relative;
+}
+
+#side-menu .top .hi-ham .circle {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background: #000;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid #555;
+  right: -15px;
+  top: 35px;
+}
+
+#side-menu .top .hi-ham .circle img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 #side-menu .top .hi-ham a {
@@ -296,6 +320,11 @@ body {
 
 #main #header .header .ham {
   position: relative;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
 }
 
 #main #header .header .ham .line1 {
@@ -305,6 +334,8 @@ body {
   width: 15px;
   height: 2px;
   background: #fff;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 #main #header .header .ham .line2 {
@@ -314,6 +345,8 @@ body {
   width: 22px;
   height: 2px;
   background: #fff;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 #main #header .header .ham .line3 {
@@ -323,12 +356,30 @@ body {
   width: 15px;
   height: 2px;
   background: #fff;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+#main #header .header .ham:hover .line1 {
+  width: 22px;
+}
+
+#main #header .header .ham:hover .line2 {
+  width: 15px;
+}
+
+#main #header .header .ham:hover .line3 {
+  width: 22px;
+}
+
+#main #header .header .logo {
+  position: relative;
 }
 
 #main #header .header .logo h1 {
   position: absolute;
-  left: 63px;
-  top: 41px;
+  left: 40px;
+  top: 20px;
 }
 
 #main #header .header .logo h1 a img {
@@ -546,11 +597,13 @@ body {
 #con1 .hot li .hotList a .hotList-text {
   opacity: 0;
   width: 100%;
-  height: 350px;
+  height: 100%;
   background: rgba(0, 0, 0, 0.6);
   position: absolute;
   left: 0;
   top: 0;
+  -webkit-transition: all .7s;
+  transition: all .7s;
   display: table;
 }
 
@@ -736,7 +789,10 @@ body {
 
 #con3 .ranking .tab {
   text-align: center;
-  margin-bottom: 20px;
+}
+
+#con3 .ranking .tab .tab-btn {
+  margin-bottom: 30px;
 }
 
 #con3 .ranking .tab .tab-btn ul li.on a {
@@ -756,17 +812,17 @@ body {
   color: #ec7d2c;
 }
 
-#con3 .ranking .tab .tab-cont {
+#con3 .ranking .tab .tab-cont .cont-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#con3 .ranking .tab .tab-cont .cont-box {
+#con3 .ranking .tab .tab-cont .cont-box .bigbox {
   margin: 0 auto;
 }
 
-#con3 .ranking .tab .tab-cont .cont-box .box {
+#con3 .ranking .tab .tab-cont .cont-box .bigbox .box {
   overflow: hidden;
   position: relative;
   margin: 20px;
@@ -775,7 +831,7 @@ body {
   background: #ccc;
 }
 
-#con3 .ranking .tab .tab-cont .cont-box .box svg {
+#con3 .ranking .tab .tab-cont .cont-box .bigbox .box svg {
   width: 470px;
   height: 520px;
   margin-top: -40px;
@@ -784,12 +840,7 @@ body {
   transition: all 0.7s ease;
 }
 
-#con3 .ranking .tab .tab-cont .cont-box .box svg:hover {
-  -webkit-transform: scale(1.2, 1.2);
-          transform: scale(1.2, 1.2);
-}
-
-#con3 .ranking .tab .tab-cont .cont-box .box img {
+#con3 .ranking .tab .tab-cont .cont-box .bigbox .box img {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -799,37 +850,43 @@ body {
   height: 280px;
 }
 
-#con3 .ranking .tab .tab-cont .cont-box .text {
+#con3 .ranking .tab .tab-cont .cont-box .bigbox .box:hover svg {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+#con3 .ranking .tab .tab-cont .cont-box .bigbox .text {
   text-align: center;
   position: relative;
   padding-bottom: 20px;
 }
 
-#con3 .ranking .tab .tab-cont .cont-box .text p {
+#con3 .ranking .tab .tab-cont .cont-box .bigbox .text p {
+  padding-bottom: 10px;
   font-size: 14px;
   font-weight: bold;
 }
 
-#con3 .ranking .tab .tab-cont .cont-box .text span {
+#con3 .ranking .tab .tab-cont .cont-box .bigbox .text span {
   font-size: 13px;
   color: #999;
 }
 
-#con3 .ranking .tab .tab-cont .cont-box .text::before {
+#con3 .ranking .tab .tab-cont .cont-box .bigbox .text::before {
   content: '';
   position: absolute;
   right: 20px;
   bottom: -10px;
   width: 390px;
   height: 1px;
-  background: #ccc;
+  background: #eee;
 }
 
-#con3 .ranking .tab .tab-cont .cont-box .rank-num {
+#con3 .ranking .tab .tab-cont .cont-box .bigbox .rank-num {
   position: relative;
 }
 
-#con3 .ranking .tab .tab-cont .cont-box .rank-num p {
+#con3 .ranking .tab .tab-cont .cont-box .bigbox .rank-num p {
   position: absolute;
   left: 30px;
   top: -110px;
@@ -844,8 +901,8 @@ body {
 
 #con3 .ranking .more {
   position: absolute;
-  left: 41%;
-  bottom: -80px;
+  left: 45%;
+  bottom: -100px;
   border: 1px solid #ccc;
   padding: 15px 50px;
   font-size: 14px;

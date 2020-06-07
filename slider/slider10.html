@@ -14,7 +14,6 @@
         img {width: 100%; vertical-align: top;}
         li {list-style: none;}
 
-        body {}        
         #nav {
             display: flex;
             position: fixed; left: 0; top: 0; 
@@ -422,7 +421,7 @@
         slideBtn.on("click", "a", function(){
             let nextIndex = (currentIndex +1) % slideCount;
             let prevIndex = (currentIndex -1) % slideCount;
-            console.log(prevIndex) 
+            //console.log(prevIndex) 
 
             if(currentIndex == 0) prevIndex = slideCount -1
           

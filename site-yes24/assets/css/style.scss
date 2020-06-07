@@ -1,15 +1,13 @@
 @font-face { font-family: 'NanumBarunGothic'; font-style: normal; font-weight: 400; src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot'); src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype'); } @font-face { font-family: 'NanumBarunGothic'; font-style: normal; font-weight: 700; src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot'); src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype') } @font-face { font-family: 'NanumBarunGothic'; font-style: normal; font-weight: 300; src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot'); src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype'); } .nanumbarungothic * { font-family: 'NanumBarunGothic', sans-serif; }
 
-body {
-    font-family : 'NanumBarunGothic', '맑은 고딕', 'Malgun Gothic', sans-serif;
-}
+body {font-family : 'NanumBarunGothic', '맑은 고딕', 'Malgun Gothic', sans-serif;}
 
 /* side-menu */
 #side-menu {
    position: fixed;
    left: -300px; top: 0;
    background: rgba(0, 0, 0, 0.8);
-   width: 15%;
+   width: 13%;
    height: 100%;
    z-index: 10000;
     .top {
@@ -18,6 +16,20 @@ body {
         height: 100px;
         background: #000;
         .hi-ham {
+            position: relative;
+            .circle {
+                cursor: pointer;
+                width: 30px; height: 30px;
+                background: #000;
+                position: absolute;
+                border-radius: 50%;
+                border: 2px solid #555;
+                right: -15px; top: 35px;
+                img {
+                    position: absolute; left: 50%; top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
             a  {
                 position: relative;
                 .line1 {
@@ -238,11 +250,14 @@ body {
         left: 0; top: 0;
         padding: 20px;
         box-sizing: border-box;
-
         .header {
             float: left;
             .ham {
                 position: relative;
+                position: absolute;
+                left: 20px; top: 20px;
+                width: 40px; height: 40px;
+                
                 .line1 {
                     position: absolute;
                     left: 10px;
@@ -250,8 +265,8 @@ body {
                     width: 15px;
                     height: 2px;
                     background: #fff;
-                }
-                
+                    transition: all .5s ease;   
+                }                
                 .line2 {
                     position: absolute;
                     left: 10px;
@@ -259,8 +274,8 @@ body {
                     width: 22px;
                     height: 2px;
                     background: #fff;
+                    transition: all .5s ease;   
                 }
-
                 .line3 {
                     position: absolute;
                     left: 10px;
@@ -268,14 +283,26 @@ body {
                     width: 15px;
                     height: 2px;
                     background: #fff;
-                }                      
+                    transition: all .5s ease;   
+                }                                              
             }
+            .ham:hover {
+                .line1 {
+                    width: 22px;
+                }                
+                .line2 {
+                    width: 15px;
+                }
+                .line3 {
+                    width: 22px;
+                } 
+            }   
             .logo {
+                position: relative;
                 h1 {
                     position: absolute;
-                    left: 63px;
-                    top: 41px;
-
+                    left: 40px;
+                    top: 20px;
                     a {
                         img {
                             width: 110px;
@@ -312,7 +339,6 @@ body {
                     }
                 }
             }
-
             .right-nav {
                 float: right;
                 margin: 23px 10px 0 0;
@@ -373,13 +399,11 @@ body {
                 }
             }
         }
-    }
-    
+    }    
 
     /* banner */
     #banner {
         margin-bottom: 80px;
-
         .banner {
             .swiper-container {
                 .swiper-wrapper {
@@ -400,7 +424,6 @@ body {
                                 }
                                 span {font-size: 16px;}
                             }
-                            img {}
                         }
                     }
                 }
@@ -434,36 +457,30 @@ body {
             float: left;
             margin: 12px;
             position: relative;
-
             .bigOne {
                 a {
                     img {
                         width: 410px;
                         display: block;
                     }
-
                     .hot1-text {
                         text-align: center;
-
                         h4 {
                             margin-top: 20px;
                             font-size: 18px;
                             font-weight: bold;
                         }
-
                         p {
                             font-size: 14px;
                             color: #999;
                             padding: 8px 0 18px 0;
                             border-bottom: 1px solid #ccc;
-
                             span {
                                 font-weight: 400;
                                 color: #ed334a;
                             }
                         }
                     }
-
                     .big-circle {
                         display: flex;
                         align-items: center;
@@ -483,44 +500,35 @@ body {
                 }
             }
         }
-
         li {
             float: left;
-
             .hotList {
                 a {
-                    img {
-                        width: 230px;
-                    }
-
+                    img {width: 230px;}
                     .hotList-text {
                         opacity: 0;
                         width: 100%;
-                        height: 350px;
+                        height: 100%;
                         background: rgba(0, 0, 0, 0.6);
                         position: absolute;
-                        left: 0;
-                        top: 0;
+                        left: 0; top: 0;
+                        transition: all .7s;
                         display: table;
-
                         div {
                             display: table-cell;
                             vertical-align: middle;
                             text-align: center;
-
                             .tit {
                                 line-height: 25px;
                                 color: #fff;
                                 font-size: 18px;
                             }
-
                             .detail {
                                 line-height: 20px;
                                 font-size: 13px;
                                 color: #fff;
                                 margin: 15px 0;
                             }
-
                             .event {
                                 font-size: 18px;
                                 color: #ec7d2c;
@@ -528,10 +536,8 @@ body {
                             }
                         }
                     }
-
                     .circle {
                         position: relative;
-
                         span {
                             display: flex;
                             align-items: center;
@@ -559,7 +565,6 @@ body {
 #con2 {
     padding-top: 120px;
     clear: both;
-
     .title {
         text-align: center;
         margin: 20px 0 30px;
@@ -567,24 +572,17 @@ body {
             width: 220px;
         }
     }
-
     .ticket {
         position: relative;
         width: 90%;
         margin: 0 auto;
-
         .box {
             margin: 15px;
             box-sizing: border-box;
             float: left;
-
             a {
                 position: relative;
-
-                img {
-                    width: 230px;
-                }
-
+                img {width: 230px;}
                 .day {
                     position: absolute;
                     left: 20%;
@@ -602,11 +600,9 @@ body {
                     justify-content: center;
                     align-items: center;
                 }
-
                 .text {
                     border: 1px solid #eee;
                     text-align: center;
-
                     time {
                         position: relative;
                         display: block;
@@ -624,7 +620,6 @@ body {
                             bottom: 21%;
                         }
                     }
-
                     p {
                         position: relative;
                         font-weight: 600;
@@ -654,9 +649,7 @@ body {
 
 /* sbanner01 */
 .sbanner01 {
-    img {
-        margin: 80px 0px;
-    }
+    img {margin: 80px 0px;}
 }
 
 /* ranking*/
@@ -673,8 +666,8 @@ body {
         position: relative;
         .tab {
             text-align: center;
-            margin-bottom: 20px;
             .tab-btn {
+                margin-bottom: 30px;
                 ul {
                     li.on a {color: #ec7d2c;}
                     li {
@@ -687,11 +680,11 @@ body {
                     }        
                 }         
             }
-            .tab-cont {
-                display: flex;
-                .cont-box {
-                    margin: 0 auto;
-                   // .cont {
+            .tab-cont { 
+                .cont-box {                    
+                    display: flex;
+                    .bigbox {
+                        margin: 0 auto;
                         .box {
                             overflow: hidden;
                             position: relative;
@@ -705,10 +698,7 @@ body {
                                 margin-top: -40px;
                                 margin-left: -50px;
                                 transition: all 0.7s ease;
-                            }
-                            svg:hover {
-                                transform: scale(1.2, 1.2);
-                            }
+                            }                            
                             img {
                                 position: absolute;
                                 left: 50%; top: 50%;
@@ -717,11 +707,15 @@ body {
                                 height: 280px;
                             }
                         }
+                        .box:hover svg {
+                            transform: scale(1.2, 1.2);
+                        }
                         .text {
                             text-align: center;
                             position: relative;
                             padding-bottom: 20px;
                             p {
+                                padding-bottom: 10px;
                                 font-size: 14px;
                                 font-weight: bold;
                             }
@@ -735,7 +729,7 @@ body {
                                 right: 20px; bottom: -10px;
                                 width: 390px;
                                 height: 1px;
-                                background: #ccc;
+                                background: #eee;
                             }
                         }
                         .rank-num {
@@ -752,14 +746,14 @@ body {
                                 background: #ec7d2c; 
                             }
                         }
-                    //}
+                    }
                 }                
             }
         }
         .more {
             position: absolute;
-            left: 41%;
-            bottom: -80px;
+            left: 45%;
+            bottom: -100px;
             border: 1px solid #ccc;
             padding: 15px 50px;
             font-size: 14px;
