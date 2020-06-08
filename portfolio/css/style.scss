@@ -1,0 +1,73 @@
+
+body {background-color: #F1EFE6;}
+
+#wrap {}
+#home {}
+
+/* header */
+#header {
+    font-family: 'DM Serif Text', serif;
+    color: #241E60;
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw;
+    #nav {
+        flex: 1 1 0;
+        ul {
+            li { 
+                padding: 1vw;
+                display: inline-block;
+
+                a {color: #241E60;}
+            }
+        }
+    }
+    h1 {
+        text-align: center;
+        font-size: 2vw;
+        flex: 1 1 0;
+    }
+    .home {
+        text-align: right;
+        flex: 1 1 0;
+        margin: 1vw;
+        img {  
+            width: 2.5vh;
+        }
+    }
+}
+/* banner */
+#banner {
+    .banner-left {
+        font-family: 'Recoleta',serif;
+        margin: 20vh 10vw;
+        h2 {
+            font-size: 6vw;
+            color: #09C9C3;
+            line-height: .9;
+            span {color: #E16162;}
+        }
+        h4 {
+            margin-top: 3vh;
+            font-size: 2vw;
+            color: #241E60;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 400;
+        }
+    }
+    .banner-right {
+
+        .heart {
+            svg {}
+            .line01 {margin-top: -5vw; }
+        }
+        .monkey {
+            svg {}
+            .line02 {}
+        }
+        .chick {                      
+            svg {}
+            .line03 {}
+        }
+    }
+}

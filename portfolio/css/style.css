@@ -1,1 +1,80 @@
-body {background-color: #F1EFE6;}
+body {
+  background-color: #F1EFE6;
+}
+
+/* header */
+#header {
+  font-family: 'DM Serif Text', serif;
+  color: #241E60;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2vw;
+}
+
+#header #nav {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+}
+
+#header #nav ul li {
+  padding: 1vw;
+  display: inline-block;
+}
+
+#header #nav ul li a {
+  color: #241E60;
+}
+
+#header h1 {
+  text-align: center;
+  font-size: 2vw;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+}
+
+#header .home {
+  text-align: right;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  margin: 1vw;
+}
+
+#header .home img {
+  width: 2.5vh;
+}
+
+/* banner */
+#banner .banner-left {
+  font-family: 'Recoleta',serif;
+  margin: 20vh 10vw;
+}
+
+#banner .banner-left h2 {
+  font-size: 6vw;
+  color: #09C9C3;
+  line-height: .9;
+}
+
+#banner .banner-left h2 span {
+  color: #E16162;
+}
+
+#banner .banner-left h4 {
+  margin-top: 3vh;
+  font-size: 2vw;
+  color: #241E60;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+}
+
+#banner .banner-right .heart .line01 {
+  margin-top: -5vw;
+}
+/*# sourceMappingURL=style.css.map */

@@ -41,29 +41,23 @@ li {list-style: none;}
 /* contents1 */
 #contents1 {width: 100%; height: 220px; display: flex; margin-top: 20px;}
 #contents1 .contents1-con1 {
+    position: relative;
     border: 1px solid #ccc;
     width: 49%; margin-right: 2%;
-    padding: 30px 30px 0;
+    padding: 30px;
 }
-#contents1 .contents1-con1 .tab {display: flex;}
-#contents1 .contents1-con1 .tab ul {}
-#contents1 .contents1-con1 .tab ul li {}
-#contents1 .contents1-con1 .tab ul li.active .title {font-size: 18px; font-weight: bold;}
-#contents1 .contents1-con1 .tab ul li a {}
-#contents1 .contents1-con1 .tab ul li div {font-size: 16px;}
-#contents1 .contents1-con1 .tab ul li div li {}
-#contents1 .contents1-con1 .tab ul li div li a {}
-#contents1 .contents1-con1 .tab ul li div li span {}
-#contents1 .contents1-con1 .tab ul li .more {}
-#contents1 .contents1-con1 .tab ul li .more img {}
-
-/* #contents1 .contents1-con1 .tab .news {font-size: 16px; color: #888; margin-left: 20px; padding-top: 3px;}
-#contents1 .contents1-con1 .more {font-size: 16px;}
-#contents1 .contents1-con1 .more img{width: 15px;}
-#contents1 .contents1-con1 ul { font-size: 14px;}
-#contents1 .contents1-con1 ul li {padding: 5px 0; overflow: hidden}
-#contents1 .contents1-con1 ul li a {float: left; width: 85%;}
-#contents1 .contents1-con1 ul li span {float: right;} */
+#contents1 .contents1-con1 .tab-Btn {}
+#contents1 .contents1-con1 .tab-Btn ul {display: flex;}
+#contents1 .contents1-con1 .tab-Btn ul li {padding-left: 20px; font-size: 15px; color: #555; font-weight: bold;}
+#contents1 .contents1-con1 .tab-Btn ul li.active {position: relative; font-size: 18px; font-weight: bold;}
+#contents1 .contents1-con1 .tab-Cont {padding: 20px;}
+#contents1 .contents1-con1 .tab-Cont .cont {}
+#contents1 .contents1-con1 .tab-Cont .cont ul {}
+#contents1 .contents1-con1 .tab-Cont .cont ul li {list-style: outside; white-space: nowrap; width: 70%; padding: 5px;}
+#contents1 .contents1-con1 .tab-Cont .cont ul li a {float: left;}
+#contents1 .contents1-con1 .tab-Cont .cont ul li a span {width: 30%; float: right;}
+#contents1 .contents1-con1 .tab-Cont .more {position: absolute; right: 30px; top: 30px; font-size: 14px;}
+#contents1 .contents1-con1 .tab-Cont .more img {width: 15px; position: relative;}
 
 #contents1 .contents1-con2 {width: 49%;}
 #contents1 .contents1-con2 a img {width: 100%; height: 220px;}
@@ -72,7 +66,6 @@ li {list-style: none;}
 #contents2 {margin: 40px 0;}
 #contents2 h4 {font-weight: bold; margin: 20px 0; font-size: 20px;}
 #contents2 ul {display: flex; justify-content: space-between;}
-#contents2 li {}
 #contents2 li img {width: 280px;}
 #contents2 li a {display: block; font-size: 17px; margin-top: 10px;}
 

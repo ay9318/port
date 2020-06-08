@@ -13,7 +13,9 @@
         a {text-decoration: none; color: #fff;}
         img {width: 100%; vertical-align: top;}
         li {list-style: none;}
-
+        body {
+            /* cursor: none; */
+        }
         #nav {
             display: flex;
             position: fixed; left: 0; top: 0; 
@@ -32,7 +34,6 @@
         }
         #nav .menu li.active a {font-weight: bold;}
         #nav .menu a {color: #000; font-size: 14px;}
-
         #nav h1 {
             flex: 1 1 0;
             font-weight: 700; letter-spacing: 10px; 
@@ -40,10 +41,7 @@
             text-align: center;
             margin: 2.4vw 1vw;
         }
-        #nav .ham {
-            flex: 1 1 0;
-            position: relative;    
-        }       
+        #nav .ham {flex: 1 1 0; position: relative;}       
         #nav .ham .bar {
             position: absolute;
             right: 0; top: 50%;
@@ -81,6 +79,37 @@
         #nav .ham .bar.on span {transform: rotate(135deg);}
         #nav .ham .bar.on span::before {top: 0; transform: translateX(100%) rotate(-90deg);}
         #nav .ham .bar.on span::after {bottom: 0; transform: translateX(-100%) rotate(-90deg);}
+
+        /* cursor */
+        #contents .cursor {
+            position: absolute; left: 0; top: 0;
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            background-color: #000;
+            z-index: 10000;
+            transform: scaleX(1);
+            user-select: none;
+            pointer-events: none;
+            transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+        }
+        #contents .cursor.active {
+            opacity: .5;
+            transform: scale(0);
+        }
+        #contents .cursor-follower {
+            position: absolute;
+            width: 30px; height: 30px;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 10000;
+            border-radius: 50%;
+            user-select: none;
+            pointer-events: none;
+            transition: transform 0.6s ease-in-out, opacity 0.2s ease-in-out;
+        }       
+        #contents .cursor-follower.active {
+            opacity: .7;
+            transform: scale(4);
+        }
 
         /* slide-wrap */
         .slide-wrap {position: relative; height: 100vh; overflow: hidden;}
@@ -272,6 +301,8 @@
     <!-- //nav -->
     
     <section id="contents">
+        <div class="cursor"></div>
+        <div class="cursor-follower"></div>
         <div class="slide-wrap">
             <div class="slide-img">
                 <div class="slide s1">
@@ -401,7 +432,7 @@
             dotIndex += "<a href='#'>0"+(index+1)+"</a>"         //이미지 갯수만큼 닷 버튼 갯수 설정
           
         });
-        slideDot.html(dotIndex)                        //닷 버튼 출력
+        slideDot.html(dotIndex);                  //닷 버튼 출력
      
         
         //이미지 움직이기
@@ -409,13 +440,13 @@
             slideImg.animate({left : -100 * num +"%"}, duration, easing)   //duration과 easing을 변수로 사용
             currentIndex = num;
             updateDot();
-        }
+        };
 
         //닷버튼에 액티브추가
         function updateDot(){
             slideDot.find("a").removeClass().eq(currentIndex).addClass("active");
             slide.removeClass("active").eq(currentIndex).addClass("active");
-        }
+        };
 
         //버튼 클릭하기
         slideBtn.on("click", "a", function(){
@@ -441,7 +472,6 @@
         $("#nav .ham .bar").click(function(){
             $(this).toggleClass("on")
         });
-
         gotoSlide(currentIndex);
 
         //자동플레이
@@ -449,9 +479,33 @@
             timer = setInterval(function(){
                 let nextIndex = (currentIndex +1) % 5;
                 gotoSlide(nextIndex);
-            },3000)
-        }
-        startTimer()
+            },3000);
+        };
+        startTimer();
+
+        const cursor = $(".cursor");
+        const follower = $(".cursor-follower");
+
+            //출력용
+        $(document).mousemove(function(e){ //마우스가 움직였을 때 이벤트 함수
+            $(".pageX").text(e.pageX);  //이벤트 pageX 값을 화면에 출력
+            $(".pageY").text(e.pageY); //이벤트 pageY 값을 화면에 출력
+        });
+
+        //커서 이동
+        $(document).mousemove(function(e){
+            gsap.to(cursor, 0.3, {left: e.pageX-5, top: e.pageY-5})
+            gsap.to(follower, 0.8, {left: e.pageX-15, top: e.pageY-15})
+        });
+
+        //마우스 오버효과
+        $("a").hover(function(){
+            cursor.addClass("active");
+            follower.addClass("active");
+        },function() {
+            cursor.removeClass("active");
+            follower.removeClass("active");
+        });
     </script>
 </body>
 </html>
