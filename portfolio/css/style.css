@@ -132,6 +132,7 @@ body {
 
 #lotto .lotto-left {
   float: left;
+  width: 50%;
 }
 
 #lotto .lotto-left .lotto-text p {
