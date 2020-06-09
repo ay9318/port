@@ -832,12 +832,14 @@ body {
 }
 
 #con3 .ranking .tab .tab-cont .cont-box .bigbox .box svg {
-  width: 470px;
+  width: 500px;
   height: 520px;
   margin-top: -40px;
   margin-left: -50px;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
 }
 
 #con3 .ranking .tab .tab-cont .cont-box .bigbox .box img {

@@ -693,11 +693,12 @@ body {font-family : 'NanumBarunGothic', '맑은 고딕', 'Malgun Gothic', sans-s
                             height: 350px;
                             background: #ccc;
                             svg {
-                                width: 470px;
+                                width: 500px;
                                 height: 520px;
                                 margin-top: -40px;
                                 margin-left: -50px;
                                 transition: all 0.7s ease;
+                                filter: blur(5px);
                             }                            
                             img {
                                 position: absolute;
