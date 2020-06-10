@@ -11,9 +11,26 @@ body {
 
 @font-face {
   font-family: 'Recoleta';
-  src: url("https://assets.website-files.com/5eb3725804ebab7adb0a6e4e/5eb426afee5762a032aa649b_Latinotype%20-%20Recoleta%20Bold.otf") format("otf");
-  font-weight: bold;
+  src: url("https://assets.website-files.com/5eb3725804ebab7adb0a6e4e/5eb426afee5762a032aa649b_Latinotype%20-%20Recoleta%20Bold.otf") format("opentype");
+  font-weight: 700;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'yg-jalnan';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#home {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 1600px;
+  margin: 0 auto;
 }
 
 /* header */
@@ -61,31 +78,31 @@ body {
 }
 
 #header .home img {
-  width: 2.5vh;
+  width: 2.2vh;
 }
 
-/* banner */
-#banner {
+/* main */
+#main {
   overflow: hidden;
 }
 
-#banner .banner-left {
+#main .main-left {
   float: left;
   font-family: 'Recoleta',serif;
-  margin: 20vh 10vw;
+  margin: 20vh 0 0 5vw;
 }
 
-#banner .banner-left h2 {
-  font-size: 6vw;
+#main .main-left h2 {
+  font-size: 5.8vw;
   color: #09C9C3;
   line-height: .9;
 }
 
-#banner .banner-left h2 span {
+#main .main-left h2 span {
   color: #E16162;
 }
 
-#banner .banner-left h4 {
+#main .main-left p {
   margin-top: 3vh;
   font-size: 2vw;
   color: #241E60;
@@ -93,58 +110,82 @@ body {
   font-weight: 400;
 }
 
-#banner .banner-right {
+#main .main-right {
   float: right;
-  position: relative;
+  width: 100%;
 }
 
-#banner .banner-right .heart {
+#main .main-right .heart {
   position: absolute;
-  right: 100%;
-  top: 5%;
+  right: 36%;
+  top: 25%;
 }
 
-#banner .banner-right .heart img {
-  width: 50vw;
+#main .main-right .heart .heart-img img {
+  width: 10vw;
   opacity: .9;
-  z-index: 1;
   -webkit-transform: rotate(-10deg);
           transform: rotate(-10deg);
 }
 
-#banner .banner-right .heart .line01 {
+#main .main-right .heart .heart-img svg {
+  z-index: -1;
   position: absolute;
   left: 50%;
-  top: 75%;
+  top: 70%;
 }
 
-#banner .banner-right .monkey {
-  position: relative;
+#main .main-right .monkey {
   position: absolute;
-  right: 120%;
-  top: 30%;
+  right: 24%;
+  top: 45%;
 }
 
-#banner .banner-right .monkey img {
-  width: 18vw;
-  -webkit-transform: rotate(10deg);
-          transform: rotate(10deg);
-}
-
-#banner .banner-right .monkey .line02 {
-  position: absolute;
-  right: 100%;
-  top: 30%;
-}
-
-#banner .banner-right .chick img {
+#main .main-right .monkey .monkey-img img {
   width: 16vw;
-  -webkit-transform: rotate(10deg);
-          transform: rotate(10deg);
+  opacity: .9;
+  -webkit-transform: rotate(8deg);
+          transform: rotate(8deg);
 }
 
-/* lotto */
-#lotto {
+#main .main-right .monkey .monkey-img svg {
+  z-index: -1;
+  position: absolute;
+  right: 40%;
+  top: 90%;
+}
+
+#main .main-right .chick {
+  position: absolute;
+  right: 12%;
+  top: 10%;
+}
+
+#main .main-right .chick .chick-img img {
+  width: 20vw;
+  opacity: .9;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+#main .main-right .chick .chick-img svg {
+  z-index: -1;
+  position: absolute;
+  left: 40%;
+  top: 90%;
+}
+
+/* content01 */
+#content01 {
+  font-family: 'yg-jalnan';
+}
+
+#content01 .cont01-text p {
+  display: inline-block;
+}
+
+/* gift */
+#gift {
   overflow: hidden;
   width: 100%;
   height: 15%;
@@ -156,39 +197,46 @@ body {
   padding: 1vw;
 }
 
-#lotto .lotto-left {
+#gift .gift-left {
   margin-left: 5%;
   float: left;
   width: 65%;
 }
 
-#lotto .lotto-left .lotto-text p {
+#gift .gift-left .gift-text p {
   font-size: 1.2vw;
   font-family: 'S-CoreDream-5Medium', serif;
 }
 
-#lotto .lotto-left .lotto-bar {
+#gift .gift-left .gift-bar {
   margin-top: 2%;
 }
 
-#lotto .lotto-left .lotto-bar .border {
+#gift .gift-left .gift-bar .border {
+  position: relative;
   border: 5px solid #241E60;
   padding: 0% 45%;
   border-radius: 80px;
-  background: #09C9C3;
-  /*                 .color {
-                    width: 50%; height: 50%;
-                    background: #09C9C3;
-                } */
 }
 
-#lotto .lotto-right {
+#gift .gift-left .gift-bar .border::after {
+  content: '';
+  height: 100%;
+  width: 5%;
+  background: #09C9C3;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 80px;
+}
+
+#gift .gift-right {
   float: right;
   width: 20%;
   margin-right: 5vw;
 }
 
-#lotto .lotto-right .gift {
+#gift .gift-right .gift-box {
   padding: 1vw 0;
   text-align: center;
   background: #F9BC60;
@@ -196,13 +244,13 @@ body {
   border-radius: 20px;
 }
 
-#lotto .lotto-right .gift .gift-text {
+#gift .gift-right .gift-box .gift-text {
   font-family: 'Josefin Sans', serif;
   font-size: 2vw;
   font-weight: bold;
 }
 
-#lotto .lotto-right .gift .gift-text img {
+#gift .gift-right .gift-box .gift-text img {
   width: 10%;
   padding-left: 5%;
   -webkit-box-sizing: unset;

@@ -6,6 +6,8 @@
     <title>Parallax08</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/prism.css">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
         @font-face { 
@@ -240,6 +242,24 @@
             from, 50%, to {opacity: 1;}
             25%, 75% {opacity: 0;}
             }
+
+        /*  modal */
+        .info1 {position: fixed; left: 0; bottom: 0; z-index: 1000; padding: 20px;}
+        .info1 a {color: #fff; border: 1px solid #fff; border-radius: 30px; padding: 5px 30px;}
+        .info1 .modal {
+            background: rgba(0,0,0,0.8);
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            top: 100%;
+            left: 0;
+            text-align: left;
+            transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+        }
+        .info1 .modal.show {top: 0;}
+        .info1 .modal .close {position: absolute; right: 10px; top: 20px; cursor: pointer;}
     </style>
 </head>
 <body>
@@ -259,6 +279,8 @@
             <li><a href="parallax06.html">Parallax06</a></li>
             <li><a href="parallax07.html">Parallax07</a></li>
             <li class="active"><a href="parallax08.html">Parallax08</a></li>
+            <li><a href="parallax09.html">Parallax09</a></li>
+            <li><a href="parallax10.html">Parallax10</a></li>
         </ul>
     </div>
 
@@ -340,12 +362,88 @@
             </section>
         </div>
     </div>
+    <div class="info1">
+        <a href="#" class="view">소스보기</a>
+        <!-- modal -->
+        <div class="modal">
+        <div class="code-editor">   
+            <span class="control"></span>
+            <span class="control"></span>
+            <span class="control"></span>
+<pre class="line-numbers"><code class="language-js">//글자 하나 하나로 쪼개기
+    let txt = $("#section1 .content-item-desc").text();
+    let split = txt.split("").join("&lt;/span&gt;>&lt;span aria-hidden='true'&gt;");
+        split = "&lt;span&gt;" + split + "&lt;/span&gt;";
+
+        $("#section1 .content-item-desc").html(split).attr("aria-label", txt);
+
+        $(".content-item-desc").each(function(){
+            let txt = $(this).text();
+            let split = txt.split("").join("&lt;/span&gt;&lt;span aria-hidden='true'&gt;");
+                split = "&lt;span aria-hidden='true'&gt;" + split + "&lt;/span&gt;";
+            $(this).html(split).attr("aria-lable",txt)
+        }); 
+      
+        //패럴럭스 이펙트
+        $(window).scroll(function() {
+            // $(".content-item").each(function(){
+            //         if($(window).scrollTop() > $(this).offset().top) {
+            //         $(this).find(".content-item-desc").addClass("show");
+            //     } else {
+            //         $(this).find(".content-item-desc").removeClass("show");
+            //     }
+            // });   
+            if($(window).scrollTop() >= $("#section1").offset().top) {   //화면에 섹션이 보이기 시작할 떄
+                $("#section1 .content-item-desc span").each(function(index){
+                    //console.log(index)
+                    setInterval(function(){
+                        $("#section1 .content-item-desc span").eq(index).addClass("show")
+                    },100*index);
+                });
+            }            
+            if($(window).scrollTop() >= $("#section2").offset().top) {   //화면에 섹션이 보이기 시작할 떄
+                $("#section2 .content-item-desc span").each(function(index){
+                    //console.log(index)
+                    setInterval(function(){
+                        $("#section2 .content-item-desc span").eq(index).addClass("show")
+                    },10*index);
+                });
+            }            
+            if($(window).scrollTop() >= $("#section3").offset().top) {   //화면에 섹션이 보이기 시작할 떄
+                $("#section3 .content-item-desc span").each(function(index){
+                    //console.log(index)
+                    setInterval(function(){
+                        $("#section3 .content-item-desc span").eq(index).addClass("show")
+                    },10*index);
+                });
+            }            
+            if($(window).scrollTop() >= $("#section4").offset().top) {   //화면에 섹션이 보이기 시작할 떄
+                $("#section4 .content-item-desc span").each(function(index){
+                    //console.log(index)
+                    setInterval(function(){
+                        $("#section4 .content-item-desc span").eq(index).addClass("show")
+                    },10*index);
+                });
+            }            
+        });
+</code></pre>    
+        </div>
+        <a class="close">닫기</a>
+        </div>
+    </div>
 
     <!-- script -->
     <script src="js/jquery.min_1.12.4.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/gsap 3.3.0.min.js"></script>
+    <script src="js/prism.js"></script>
     <script>
+        //스크롤
+        window.addEventListener("scroll",() => {
+            let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop) + screen.height/2;
+            document.querySelector(".pageYOffset").textContent = pageYOffset;
+        });
+
         //글자 하나 하나로 쪼개기
         let txt = $("#section1 .content-item-desc").text();
         let split = txt.split("").join("</span><span aria-hidden='true'>");
@@ -411,6 +509,14 @@
                     });
                 }            
             });
+
+        //modal
+        $(".info1 a").click(function(){
+            $(".info1 .modal").addClass("show");
+        });
+        $(".info1 .close").click(function(){
+            $(".info1 .modal").removeClass("show");
+        });
     </script>
 </body>
 </html>

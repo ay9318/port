@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcom</title>
+    <meta name="title" content="Ayoung Portfolio">
+    <meta name="author" content="HwangAyoung">
+    <meta name="keywords" content="포트폴리오, 애니메이션, 스크립트, 웹퍼블리셔, 웹반응형, UIUX, Portfolio, portfolio, animation, script, publisher">
+    <title>Welcom Portfolio</title>
 
     <!-- style -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- font -->
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Josefin+Sans&display=swap" rel="stylesheet">
+    <!-- webfont -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Josefin+Sans&display=swap" rel="stylesheet">    
 </head>
 <body>
     <div id="wrap">
@@ -19,7 +22,7 @@
                 <nav id="nav">
                     <ul>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Work</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
@@ -28,68 +31,78 @@
                 <a href="https://ay9318.github.io/port/" class="home"><img src="img/browser.svg" alt="사이트홈"></a>
             </header>
             <!-- //header -->
-            <section id="banner">
-                <div class="banner-left">
-                    <h2>Web <span>Publisher</span><br>
-                        Hwang <span>Ayoung</span></h2>
-                    <h4>I think web publisher is make <br> imagination a reality.</h4>
-                </div>
-                <!-- //banner-left -->
-                <div class="banner-right">
-                    <div class="heart">
-                        <img src="img/heart.svg" alt="heart">
-                        <div class="line01">
-                            <svg width="46" height="476" viewBox="0 0 46 476" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2 2C7.90865 46.6203 92.3145 155.5 2.00008 474" stroke="#333333" stroke-width="4" stroke-linecap="round"/>
-                            </svg>                                
-                        </div>
-                    </div>
-                    <!-- //heart -->
-                    
-                    <div class="monkey">
-                        <img src="img/monkey.svg" class="monkey" alt="monkey">
-                        <div class="line02">
-                            <svg width="75" height="366" viewBox="0 0 75 366" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.7806 3.13159C-29.0881 145.682 135.104 254.406 33.7186 362.618" stroke="#333333" stroke-width="4" stroke-linecap="round"/>
-                            </svg>                                
-                        </div>
-                    </div>
-                    <!-- //monkey -->     
 
-                    <div class="chick">
-                        <img src="img/bird.svg" alt="chick">                    
-                        <div class="line03">
-                            <svg width="80" height="628" viewBox="0 0 80 628" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21.4582 3.13159C-26.2776 250.194 136.537 436.035 33.7187 624.45" stroke="#333333" stroke-width="4" stroke-linecap="round"/>
-                            </svg>                                
-                        </div>
+            <section id="main">
+                <div class="container">                
+                    <div class="main-left">
+                        <h2>Web <span>Publisher</span><br>Hwang <span>Ayoung</span></h2>
+                        <p>I think web publisher is make <br> imagination a reality.</p>
                     </div>
-                    <!-- //chick -->
+                    <!-- //banner-left -->
+                    <div class="main-right">
+                        <div class="heart">
+                            <div class="heart-img">
+                                <img src="img/heart.svg" alt="heart">
+                                <svg width="46" height="476" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 2C7.90865 46.6203 92.3145 155.5 2.00008 474" stroke="#333333" stroke-width="3" stroke-linecap="round"/>
+                                </svg>             
+                            </div>
+                        </div>
+                        <!-- //heart -->
+                        
+                        <div class="monkey">
+                            <div class="monkey-img">
+                                <img src="img/monkey.svg" alt="monkey">
+                                <svg width="75" height="366" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.7806 3.13159C-29.0881 145.682 135.104 254.406 33.7186 362.618" stroke="#333333" stroke-width="3" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- //monkey -->     
+
+                        <div class="chick">
+                            <div class="chick-img">
+                                <img src="img/bird.svg" alt="chick">
+                                <svg width="80" height="628" viewBox="0 0 80 628" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.4582 3.13159C-26.2776 250.194 136.537 436.035 33.7187 624.45" stroke="#333333" stroke-width="3" stroke-linecap="round"/>
+                                </svg>
+                            </div>                          
+                        </div>
+                        <!-- //chick -->                        
+                    </div>
+                    <!-- //main-right -->
                 </div>
-                <!-- //banner-right -->
+                <!-- //container -->
             </section>
-            <!-- //banner -->
+            <!-- //main -->
         </div>
         <!-- //home -->
 
-        <div id="lotto">
-            <div class="lotto-left">
-                <div class="lotto-text">
+        <section id="content01">
+            <div class="container">
+                <div class="cont01-text">
+                    <span>"</span><p>안녕하세요, 신입 웹 퍼블리셔 <strong>황아영</strong>입니다.<br>웹 퍼블리셔는 상상한것을 현실로 만드는 <strong>매력적인 일</strong>이라고 생각합니다.<br>물론, 많은 노력이 따르는건 아주 잘 알고있습니다.<br>하지만 <strong>한계를 뛰어넘었을때의 성취감</strong>은<br>제가 이 길을 가고자하는 정답이라고 생각합니다.</p><span>"</span>
+                </div>
+            </div>            
+        </section>
+        <!-- //content01 -->
+
+        <div id="gift">
+            <div class="gift-left">
+                <div class="gift-text">
                     <p>끝까지 다 보시면 깜짝 선물이 준비 되어있습니다!</p>
                 </div>
-                <div class="lotto-bar">
-                    <span class="border">
-                        <span class="color"></span>
-                    </span>                    
+                <div class="gift-bar">
+                    <span class="border"></span>                    
                 </div>
             </div>
-            <div class="lotto-right">
-                <div class="gift">
+            <div class="gift-right">
+                <div class="gift-box">
                     <div class="gift-text">Gift for you<img src="img/rowheart.svg" alt="heart"></div>
                 </div>
             </div>
         </div>
-        <!-- //lotto -->
+        <!-- //gift -->
     </div>
     <!-- //wrap -->
 </body>

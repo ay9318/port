@@ -1,10 +1,21 @@
 body {background-color: #F1EFE6;}
 
-@font-face {font-family: 'S-CoreDream-5Medium'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff'); font-weight: normal; font-style: normal;}
-@font-face {font-family: 'Recoleta'; src: url('https://assets.website-files.com/5eb3725804ebab7adb0a6e4e/5eb426afee5762a032aa649b_Latinotype%20-%20Recoleta%20Bold.otf') format('otf'); font-weight: bold; font-style: normal;}
+@font-face {
+    font-family: 'S-CoreDream-5Medium'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff'); font-weight: normal; font-style: normal;
+}
+@font-face {
+    font-family: 'Recoleta';
+    src: url('https://assets.website-files.com/5eb3725804ebab7adb0a6e4e/5eb426afee5762a032aa649b_Latinotype%20-%20Recoleta%20Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face { 
+    font-family: 'yg-jalnan'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff'); font-weight: normal; font-style: normal; 
+}
 
 #wrap {}
-#home {}
+#home {width: 100%; height: 100%;}
+.container {width: 1600px; margin: 0 auto;}
 
 /* header */
 #header {
@@ -34,24 +45,24 @@ body {background-color: #F1EFE6;}
         flex: 1 1 0;
         margin: 1vw;
         img {  
-            width: 2.5vh;
+            width: 2.2vh;
         }
     }
 }
-/* banner */
-#banner {
+/* main */
+#main {
     overflow: hidden;
-    .banner-left {
+    .main-left {
         float: left;
         font-family: 'Recoleta',serif;
-        margin: 20vh 10vw;
+        margin: 20vh 0 0 5vw;
         h2 {
-            font-size: 6vw;
+            font-size: 5.8vw;
             color: #09C9C3;
             line-height: .9;
             span {color: #E16162;}
         }
-        h4 {
+        p {
             margin-top: 3vh;
             font-size: 2vw;
             color: #241E60;
@@ -59,48 +70,69 @@ body {background-color: #F1EFE6;}
             font-weight: 400;
         }
     }
-    .banner-right {
+    .main-right {
         float: right;
-        position: relative;
+        width: 100%;
         .heart {
-            position: absolute; right: 100%; top: 5%;
-            img {
-                width: 50vw; 
-                opacity: .9; z-index: 1;
-                transform: rotate(-10deg);
-            }
-            .line01 {
-                position: absolute; left: 50%; top: 75%;
-                svg {}
+            position: absolute; right: 36%; top: 25%;
+            .heart-img {             
+                img {
+                    width: 10vw;
+                    opacity: .9; 
+                    transform: rotate(-10deg);
+                }
+                svg { 
+                    z-index: -1; 
+                    position: absolute; left: 50%; top: 70%;
+                }               
             }
         }
         .monkey {
-            position: relative;
-            position: absolute; right: 120%; top: 30%;
-            img {                
-                width: 18vw;
-                transform: rotate(10deg);
-            }
-            .line02 {
-                position: absolute; right: 100%; top: 30%;
-                svg {}
+            position: absolute; right: 24%; top: 45%;
+            .monkey-img {
+                img {
+                    width: 16vw;
+                    opacity: .9; 
+                    transform: rotate(8deg);
+                }
+                svg { 
+                    z-index: -1; position: absolute; 
+                    right: 40%; top: 90%;
+                }               
             }
         }
         .chick {
-            img {
-                width: 16vw;
-                transform: rotate(10deg);
+            position: absolute; right: 12%; top: 10%;
+            .chick-img {
+                img {
+                    width: 20vw;
+                    opacity: .9; 
+                    transform: rotate(-10deg);
+                }
+                svg { 
+                    z-index: -1; position: absolute; 
+                    left: 40%; top: 90%;
+                }               
             }
-            .line03 {
-                svg {}
-            }
-        }        
+        }               
+    }
+}
+
+/* content01 */
+#content01 {
+    font-family: 'yg-jalnan';
+    .cont01-text {
+        span {}
+        p {
+            display: inline-block;
+            strong {}
+        }
     }
 }
 
 
-/* lotto */
-#lotto {
+/* gift */
+#gift {
     overflow: hidden;
     width: 100%;
     height: 15%;
@@ -108,35 +140,39 @@ body {background-color: #F1EFE6;}
     border-top: 5px solid #241E60;
     background: #F1EFE6;
     padding: 1vw;
-    .lotto-left {
+    .gift-left {
         margin-left: 5%;
         float: left;
         width: 65%;
-        .lotto-text {
+        .gift-text {
             p {
                 font-size: 1.2vw;
                 font-family: 'S-CoreDream-5Medium', serif;
             }           
         }
-        .lotto-bar {
+        .gift-bar {
             margin-top: 2%;
             .border {
+                position: relative;
                 border: 5px solid #241E60; 
                 padding: 0% 45%;
-                border-radius: 80px;
-                background: #09C9C3;
-/*                 .color {
-                    width: 50%; height: 50%;
+                border-radius: 80px;            
+                &::after {
+                    content: '';
+                    height: 100%;
+                    width: 5%;
                     background: #09C9C3;
-                } */
+                    position: absolute; left: 0; top: 0;
+                    border-radius: 80px;
+                }
             }            
         }
     }
-    .lotto-right {
+    .gift-right {
         float: right;
         width: 20%;
         margin-right: 5vw;
-        .gift {
+        .gift-box {
             padding: 1vw 0;
             text-align: center;
             background: #F9BC60;
@@ -146,7 +182,9 @@ body {background-color: #F1EFE6;}
                 font-family: 'Josefin Sans', serif;
                 font-size: 2vw;
                 font-weight: bold;
-                img {width: 10%; padding-left: 5%; box-sizing: unset;}
+                img {
+                    width: 10%; padding-left: 5%; box-sizing: unset;
+                }
             }
         }
     }    
