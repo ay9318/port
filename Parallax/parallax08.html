@@ -181,7 +181,7 @@
             transition: all 0.44s ease; 
             display: inline-block; 
             min-width: 20px;
-            }
+        }
         #section1 .content-item-desc span.show {opacity: 1; transform: translateY(0);}
 
         #section2 .content-item-desc span {
@@ -189,11 +189,11 @@
             transition: all 0.44s ease; 
             display: inline-block; 
             min-width: 20px;
-            }
+        }
         #section2 .content-item-desc span.show {
             opacity: 1;
             animation: flipInY 1s; 
-            }
+        }
         @keyframes flipInY {
         from {
             transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
@@ -208,41 +208,113 @@
         80% {transform: perspective(400px) rotate3d(0, 1, 0, -5deg);}
         to {transform: perspective(400px);}
         }
-
         #section3 .content-item-desc span {
             opacity: 0;
             transition: all 0.44s ease; 
             display: inline-block; 
             min-width: 20px;
-            }
+        }
         #section3 .content-item-desc span.show {
             opacity: 1;
             animation: flipInX 1s; 
-            }
-            @keyframes flipInX {
-            from {
-                transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-                animation-timing-function: ease-in; opacity: 0;}
-            40% {transform: perspective(400px) rotate3d(1, 0, 0, -20deg); animation-timing-function: ease-in;}
-            60% {transform: perspective(400px) rotate3d(1, 0, 0, 10deg); opacity: 1;}
-            80% {transform: perspective(400px) rotate3d(1, 0, 0, -5deg);}
-            to {transform: perspective(400px);}
-            }
+        }
+        @keyframes flipInX {
+        from {
+            transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+            animation-timing-function: ease-in; opacity: 0;}
+        40% {transform: perspective(400px) rotate3d(1, 0, 0, -20deg); animation-timing-function: ease-in;}
+        60% {transform: perspective(400px) rotate3d(1, 0, 0, 10deg); opacity: 1;}
+        80% {transform: perspective(400px) rotate3d(1, 0, 0, -5deg);}
+        to {transform: perspective(400px);}
+        }
         #section4 .content-item-desc span {
             opacity: 0;
             transition: all 0.44s ease; 
             display: inline-block; 
             min-width: 20px;
-            }
+        }
         #section4 .content-item-desc span.show {
             opacity: 1;
             animation: flash 1s; 
-            }
-            @keyframes flash {
-            from, 50%, to {opacity: 1;}
-            25%, 75% {opacity: 0;}
-            }
-
+        }
+        @keyframes flash {
+        from, 50%, to {opacity: 1;}
+        25%, 75% {opacity: 0;}
+        }
+        #section5 .content-item-desc span {
+            opacity: 0;
+            transition: all 0.44s ease; 
+            display: inline-block; 
+            min-width: 20px;
+        }
+        #section5 .content-item-desc span.show {
+            opacity: 1;
+            animation: flash 1s; 
+        }
+        @keyframes flash {
+        from, 50%, to {opacity: 1;}
+        25%, 75% {opacity: 0;}
+       }
+        #section6 .content-item-desc span {
+            opacity: 0; transform: translateY(70px); 
+            transition: all 0.44s ease; 
+            display: inline-block; 
+            min-width: 20px;
+        }
+        #section6 .content-item-desc span.show {opacity: 1; transform: translateY(0);}
+        #section7 .content-item-desc span {
+            opacity: 0;
+            transition: all 0.44s ease; 
+            display: inline-block; 
+            min-width: 20px;
+        }
+        #section7 .content-item-desc span.show {
+            opacity: 1;
+            animation: flipInY 1s; 
+        }
+        @keyframes flipInY {
+        from {
+            transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+            animation-timing-function: ease-in;
+            opacity: 0;
+        }
+        40% {
+            transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+            animation-timing-function: ease-in;
+        }
+        60% {transform: perspective(400px) rotate3d(0, 1, 0, 10deg); opacity: 1;}
+        80% {transform: perspective(400px) rotate3d(0, 1, 0, -5deg);}
+        to {transform: perspective(400px);}
+        }
+        #section8 .content-item-desc span {
+            opacity: 0;
+            transition: all 0.44s ease; 
+            display: inline-block; 
+            min-width: 20px;
+        }
+        #section8 .content-item-desc span.show {
+            opacity: 1;
+            animation: flipInX 1s; 
+        }
+        @keyframes flipInX {
+        from {
+            transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+            animation-timing-function: ease-in; opacity: 0;}
+        40% {transform: perspective(400px) rotate3d(1, 0, 0, -20deg); animation-timing-function: ease-in;}
+        60% {transform: perspective(400px) rotate3d(1, 0, 0, 10deg); opacity: 1;}
+        80% {transform: perspective(400px) rotate3d(1, 0, 0, -5deg);}
+        to {transform: perspective(400px);}
+        }
+        #section9 .content-item-desc span {
+            opacity: 0;
+            transition: all 0.44s ease; 
+            display: inline-block; 
+            min-width: 20px;
+        }
+        #section9 .content-item-desc span.show {
+            opacity: 1;
+            animation: flash 1s; 
+        }
         /*  modal */
         .info1 {position: fixed; left: 0; bottom: 0; z-index: 1000; padding: 20px;}
         .info1 a {color: #fff; border: 1px solid #fff; border-radius: 30px; padding: 5px 30px;}
@@ -445,71 +517,41 @@
         });
 
         //글자 하나 하나로 쪼개기
+        
         let txt = $("#section1 .content-item-desc").text();
         let split = txt.split("").join("</span><span aria-hidden='true'>");
             split = "<span>" + split + "</span>";
 
-            $("#section1 .content-item-desc").html(split).attr("aria-label", txt);
+        $("#section1 .content-item-desc").html(split).attr("aria-label", txt);
 
-            $(".content-item-desc").each(function(){
-                let txt = $(this).text();
-                let split = txt.split("").join("</span><span aria-hidden='true'>");
-                    split = "<span aria-hidden='true'>" + split + "</span>";
-                $(this).html(split).attr("aria-lable",txt)
-            }); 
+        $(".content-item-desc").each(function(){
+            let txt = $(this).text();
+            let split = txt.split("").join("</span><span aria-hidden='true'>");
+                split = "<span aria-hidden='true'>" + split + "</span>";
+            $(this).html(split).attr("aria-lable",txt)
+        }); 
 
-            //자바스크립트 한번에 - 숙제
-           /*  document.querySelectorAll(".content-item-desc").forEach(elem => {
-                let txt = elem.innerHTML;
-                let split = txt.split("").join("</span><span aria-hidden='true'>");
-                    split = "<span aria-hidden='true'>" + split + "</span>";
-                    //console.log(split)
-                elem.innerHTML= split.attr("aria-lable",txt)
-            }); */
+        //패럴럭스 이펙트
+        $(window).scroll(function() {
+            // $(".content-item").each(function(){
+            //         if($(window).scrollTop() > $(this).offset().top) {
+            //         $(this).find(".content-item-desc").addClass("show");
+            //     } else {
+            //         $(this).find(".content-item-desc").removeClass("show");
+            //     }
+            // }); 
 
-            //패럴럭스 이펙트
-            $(window).scroll(function() {
-                // $(".content-item").each(function(){
-                //         if($(window).scrollTop() > $(this).offset().top) {
-                //         $(this).find(".content-item-desc").addClass("show");
-                //     } else {
-                //         $(this).find(".content-item-desc").removeClass("show");
-                //     }
-                // });   
-                if($(window).scrollTop() >= $("#section1").offset().top) {   //화면에 섹션이 보이기 시작할 떄
-                    $("#section1 .content-item-desc span").each(function(index){
+            for(let i =1; 1<=9; i++) {
+                if($(window).scrollTop() >= $("#section"+i).offset().top) {   //화면에 섹션이 보이기 시작할 떄
+                    $("#section"+i+" .content-item-desc span").each(function(index){
                         //console.log(index)
                         setInterval(function(){
-                            $("#section1 .content-item-desc span").eq(index).addClass("show")
-                        },100*index);
-                    });
-                }            
-                if($(window).scrollTop() >= $("#section2").offset().top) {   //화면에 섹션이 보이기 시작할 떄
-                    $("#section2 .content-item-desc span").each(function(index){
-                        //console.log(index)
-                        setInterval(function(){
-                            $("#section2 .content-item-desc span").eq(index).addClass("show")
+                            $("#section"+i+" .content-item-desc span").eq(index).addClass("show")
                         },10*index);
                     });
-                }            
-                if($(window).scrollTop() >= $("#section3").offset().top) {   //화면에 섹션이 보이기 시작할 떄
-                    $("#section3 .content-item-desc span").each(function(index){
-                        //console.log(index)
-                        setInterval(function(){
-                            $("#section3 .content-item-desc span").eq(index).addClass("show")
-                        },10*index);
-                    });
-                }            
-                if($(window).scrollTop() >= $("#section4").offset().top) {   //화면에 섹션이 보이기 시작할 떄
-                    $("#section4 .content-item-desc span").each(function(index){
-                        //console.log(index)
-                        setInterval(function(){
-                            $("#section4 .content-item-desc span").eq(index).addClass("show")
-                        },10*index);
-                    });
-                }            
-            });
-
+                }     
+            }
+        });
         //modal
         $(".info1 a").click(function(){
             $(".info1 .modal").addClass("show");
