@@ -231,7 +231,6 @@
         }
         .info1 .modal.show {top: 0;}
         .info1 .modal .close {position: absolute; right: 10px; top: 20px; cursor: pointer;}
-        .code-editor {height: auto;}
     </style>
 </head>
 <body>
@@ -365,15 +364,55 @@
             <span class="control"></span>
             <span class="control"></span>
             <span class="control"></span>
-<pre class="line-numbers"><code class="language-js">$(window).scroll(function(){
-    $(".reveal").each(function(){
-        if($(window).scrollTop() + $(window).height()/2 > $(this).offset().top) {
-            $(this).delay($("this").data("delay")).queue(function(){
-                $(this).addClass("show");
-            });
-        }
-    });
-});
+<pre class="line-numbers"><code class="language-js"> /* reveal */
+    .reveal span,
+    .reveal img {opacity: 0;}
+
+    .reveal.show span,
+    .reveal.show img {animation: text 0.1s 1.1s forwards;}
+
+    @keyframes text {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+
+    .reveal.show::before,
+    .reveal.show::after {
+        content: '';
+        height: 100%;
+        position: absolute;
+        z-index: 10;
+    }
+    .reveal.show::before {background-color: orange;}
+    .reveal.show::after {background-color: lightsalmon}
+    .reveal.reveal-ltr.show::before {animation: revealLTR 1.8s ease-in-out;}
+    .reveal.reveal-ltr.show::after {animation: revealLTR 1s .6s ease-in-out;}
+    @keyframes revealLTR {
+        0% {width: 0; left: 0; top: 0;}
+        65% {width: 100%; left: 0; top: 0;}
+        100% {width: 0; left: 100%; top: 0;}
+    }
+    .reveal.reveal-rtl.show::before {animation: revealRTL 1.8s ease-in-out;}
+    .reveal.reveal-rtl.show::after {animation: revealRTL 1s .6s ease-in-out;}
+    @keyframes revealRTL {
+        0% {width: 0; right: 0; top: 0;}
+        65% {width: 100%; right: 0; top: 0;}
+        100% {width: 0; right: 100%; top: 0;}
+    }        
+    .reveal.reveal-ttb.show::before {animation: revealTTB 1.8s ease-in-out;}
+    .reveal.reveal-ttb.show::after {animation: revealTTB 1s .6s ease-in-out;}
+    @keyframes revealTTB {
+        0% {width: 100%; height: 0; top: 0; left: 0;}
+        65% {width: 100%; height: 100%; top: 0; left: 0;}
+        100% {width: 100%; height: 0; top: 100%; left: 0;}
+    }
+    .reveal.reveal-btt.show::before {animation: revealBTT 1.8s ease-in-out;}
+    .reveal.reveal-btt.show::after {animation: revealBTT 1s .6s ease-in-out;}
+    @keyframes revealBTT {
+        0% {width: 100%; height: 0; bottom: 0; left: 0;}
+        65% {width: 100%; height: 100%; bottom: 0; left: 0;}
+        100% {width: 100%; height: 0; bottom: 100%; left: 0;}
+    }
 </code></pre>    
         </div>
         <a class="close">닫기</a>

@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Recoleta';
+    src: url('https://assets.website-files.com/5eb3725804ebab7adb0a6e4e/5eb426afee5762a032aa649b_Latinotype%20-%20Recoleta%20Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* layout */
+#contents {}
+#section1 {height: 100vh; background-color: #F1EFE6;}
+#section2 {}
+#section3 {}
+#section4 {}
+#section5 {}
+#section6 {}
+
+/* continer */
+.container {
+    width: 1600px; margin: 0 auto;
+}
+
+/* header */
+#header {
+    position: fixed; left: 0; top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    height: 80px;
+}
+#header {}
+
+/* progress */
+.progress {
+    position: fixed; left: 0; bottom: 0;
+    width: 100%;
+    border-top: 5px solid #241E60;
+    background: #F1EFE6;
+    height: 100px;
+}
+.progress span {
+    display: block;
+}
+
+/* sec1 */
+.sec1 {
+    height: 100vh;
+    display: flex; justify-content: center; align-items: center;
+}
+.sec1 .left {width: 60%; height: 800px; font-family: 'Recoleta';}
+.sec1 .right {width: 40%; height: 800px; background: #ddd;}
+
+.sec1 .left {display: flex; justify-content: center; align-items: center;}
+.sec1 .left .text {}
+.sec1 .left .text h2 {font-size: 6vw; line-height: 1; word-break: keep-all; color: #09c9c3;}
+.sec1 .left .text h2 strong {color: #e16162}
+.sec1 .left .text p {
+    padding-top: 1vw;
+    font-family: 'Josefin Sans', sans-serif; color: #241e60; font-size: 1.8vw; line-height: 1.3;}
+
+.sec1 .right .rimg1 {}
+
+/* mediaquery */
+@media (max-width:1420px){
+    .container {width: 100%;}
+}
+
+
+
+
+
+
+
+

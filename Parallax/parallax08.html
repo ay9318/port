@@ -443,12 +443,6 @@
             <span class="control"></span>
             <span class="control"></span>
 <pre class="line-numbers"><code class="language-js">//글자 하나 하나로 쪼개기
-    let txt = $("#section1 .content-item-desc").text();
-    let split = txt.split("").join("&lt;/span&gt;>&lt;span aria-hidden='true'&gt;");
-        split = "&lt;span&gt;" + split + "&lt;/span&gt;";
-
-        $("#section1 .content-item-desc").html(split).attr("aria-label", txt);
-
         $(".content-item-desc").each(function(){
             let txt = $(this).text();
             let split = txt.split("").join("&lt;/span&gt;&lt;span aria-hidden='true'&gt;");
@@ -518,11 +512,11 @@
 
         //글자 하나 하나로 쪼개기
         
-        let txt = $("#section1 .content-item-desc").text();
+/*         let txt = $("#section1 .content-item-desc").text();
         let split = txt.split("").join("</span><span aria-hidden='true'>");
             split = "<span>" + split + "</span>";
 
-        $("#section1 .content-item-desc").html(split).attr("aria-label", txt);
+        $("#section1 .content-item-desc").html(split).attr("aria-label", txt); */
 
         $(".content-item-desc").each(function(){
             let txt = $(this).text();

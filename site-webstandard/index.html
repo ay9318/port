@@ -122,7 +122,8 @@
                     <div class="tit">
                         <h2>"나는 퍼블리셔다"</h2>
                         <a href="#" class="btn">
-                            <span class="ir_pm">전체메뉴</span></a>
+                            <span class="ir_pm">전체메뉴</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -454,68 +455,74 @@
     </div>
     <!-- //wrap -->
 
-        <!-- javascript Libraries -->
-        <script src="js/jquery.min_1.12.4.js"></script>
-        <script src="js/slick.min.js"></script>
-        <script src="js/lightgallery-all.min.js"></script>
-        <script>
-            //탭 메뉴
-            var $tab_list = $(".tab-menu");
+    <!-- javascript Libraries -->
+    <script src="js/jquery.min_1.12.4.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/lightgallery-all.min.js"></script>
+    <script>
+        //메뉴 토글클래스
+        $(".btn").click(function(e) {
+            e.preventDefault();
+            $(".nav").slideToggle();
+            $(".btn").toggleClass("open");
+        });        
+
+        //탭 메뉴
+        var $tab_list = $(".tab-menu");
+        
+        $tab_list.find("ul ul").hide();
+        $tab_list.find("li.active>ul").show();
+        
+        function tabMenu(e) {
+            e.preventDefault();
+            var $this = $(this);
             
-            $tab_list.find("ul ul").hide();
-            $tab_list.find("li.active>ul").show();
-            
-            function tabMenu(e) {
-                e.preventDefault();
-                var $this = $(this);
-                
-                $this.next("ul").show().parent("li").addClass("active").siblings("li").removeClass("active").find(">ul").hide();
-            }
-            $tab_list.find("ul>li>a").click(tabMenu).focus(tabMenu);
-        </script>
-        <script>            
-            //배너 슬릭이미지
-            $(document).ready(function(){
-                $('.ban').slick({
-                    dots: true,
-                    infinite: true,
-                    speed: 500,
-                    arrows: true,
-                    autoplay: true,
-                    autoplaySpeed: 3000,
-                    slidesToShow: 3,
-                    slidesToScroll: 3
-                });
+            $this.next("ul").show().parent("li").addClass("active").siblings("li").removeClass("active").find(">ul").hide();
+        }
+        $tab_list.find("ul>li>a").click(tabMenu).focus(tabMenu);
+     
+        //배너 슬릭이미지
+        $(document).ready(function(){
+            $('.ban').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                arrows: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                slidesToShow: 3,
+                slidesToScroll: 3
             });
-        </script>
-        <script>
-            $(document).ready(function(){
-                //라이트 박스
-                $(".lightbox").lightGallery();
-            });
-                //갤러리
-                $('.gallery-img').slick({                    
-                    fade: true,
-                    pauseOnHover: true,
-                    arrows: false,
-                    infinite: true,
-                    autoplay: true,
-                    autoplaySpeed: 3000,
-                    speed: 300,
-                    slidesToShow: 1
-                });
-                $(".play").click(function(){
-                    $('.gallery-img').slick("slickPlay");          
-                });
-                $(".pause").click(function(){
-                    $('.gallery-img').slick("slickPause");          
-                });
-                $(".prev").click(function(){
-                    $('.gallery-img').slick("slickPrev");          
-                });
-                $(".next").click(function(){
-                    $('.gallery-img').slick("slickNext");          
-                });            
-        </script>
+        });
+
+        //라이트 박스
+        $(document).ready(function(){          
+            $(".lightbox").lightGallery();
+        });
+
+        //갤러리
+        $('.gallery-img').slick({                    
+            fade: true,
+            pauseOnHover: true,
+            arrows: false,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            speed: 300,
+            slidesToShow: 1
+        });
+        $(".play").click(function(){
+            $('.gallery-img').slick("slickPlay");          
+        });
+        $(".pause").click(function(){
+            $('.gallery-img').slick("slickPause");          
+        });
+        $(".prev").click(function(){
+            $('.gallery-img').slick("slickPrev");          
+        });
+        $(".next").click(function(){
+            $('.gallery-img').slick("slickNext");          
+        });            
+    </script>
 </body>
 </html>

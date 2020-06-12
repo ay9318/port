@@ -97,7 +97,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 }
 
 /*  전체 메뉴 */
-.nav {overflow: hidden; padding: 25px 0;}
+.nav {overflow: hidden; padding: 25px 0; display: none;}
 .nav > div {float: left; width: 40%;}
 .nav > div h3 {font-size: 18px; color: #25a2d0; font-weight: bold; margin-bottom: 4px;}
 .nav > div:last-of-type {width: 20%;}
