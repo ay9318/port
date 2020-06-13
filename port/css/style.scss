@@ -1,4 +1,5 @@
 body {background-color: #F1EFE6;}
+h3 {font-family: 'Recoleta',serif; font-size: 6vw;}
 
 /* layout */
 #wrap {height: 5000px;}
@@ -11,7 +12,7 @@ body {background-color: #F1EFE6;}
     color: #241E60;
     display: flex;
     justify-content: space-between;
-    padding: 2vw;
+    padding: 1vw;
     #nav {
         flex: 1 1 0;
         ul {
@@ -27,13 +28,15 @@ body {background-color: #F1EFE6;}
         font-size: 2vw;
         flex: 1 1 0;
     }
-    .home {
-        text-align: right;
+    .icon {
         flex: 1 1 0;
-        margin: 1vw;
-        img {  
-            width: 1.3vw;
-        }
+        text-align: right;
+        a {
+            img {
+                margin: 1vw 0 0 1vw;                
+                width: 1vw;
+            }
+        }       
     }
 }
 /* main */
@@ -155,6 +158,7 @@ body {background-color: #F1EFE6;}
         }
     }
 }
+
 /* content02 */
 #content02 {
     overflow: hidden;
@@ -163,14 +167,13 @@ body {background-color: #F1EFE6;}
     .cont02-text {
         float: left;
         width: 65%;
-        color: #241E60;
+        color: #241E60;        
         p {
             padding-left: 2vw;
             line-height: 1;
-            text-indent: -60px;
             font-size: 2.8vw;
             font-family: 'yg-jalnan';
-            em {font-style: normal; font-size: 3.8vw;}
+            em {font-size: 3.8vw;}
         }
         .text {
             margin: 2vw;
@@ -220,6 +223,90 @@ body {background-color: #F1EFE6;}
     }
 }
 
+/* content03 */
+#content03 {
+    background: #ADD8D7;
+    padding: 10vw 0;
+    .cont03-title {
+        display: flex;
+        position: relative;
+        h3 {color: #241E60;}
+        img {
+            width: 8vw; 
+            position: absolute; left: 32vw; top: -3vw;
+            transform: rotate(20deg);
+        }
+    }
+    .cont03-cont {
+        .cont-standard {            
+            padding: 8vw 0;
+            .standard {
+                display: flex;
+                .cont-left {
+                    h4 {font-family: 'yg-jalnan'; font-size: 2.5vw; color: #333;}
+                    p {
+                        margin: 2vw 0; 
+                        width: 78%; 
+                        color: #555;
+                        font-family: 'S-CoreDream-4Regular';
+                        font-size: 1vw;
+                    }
+                    .cont-btn {
+                        margin-top: 5vw;
+                        span {
+                            margin-right: 3vw;
+                            font-family: 'S-CoreDream-5Medium', serif;
+                            font-size: 1.5vw;
+                            border: 4px solid #000;
+                            padding: 1.2vw 3vw;
+                            background: #FFD88E;
+                            border-radius: 10px;
+                            overflow: hidden;
+                        }
+                    }
+                }
+                .cont-right {
+                    .border-box {
+                        width: 100%;
+                        border: 4px solid #000;
+                        img {}
+                    }
+                }
+            }            
+            .tab-menu {
+                margin-top: 4vw;                      
+                ul {
+                    display: flex;
+                    border: 4px solid #000;
+                    li {
+                        flex-basis: 20%;                        
+                        a {
+                            font-size: 1vw;
+                            display: inline-block;                         
+                            text-align: center;
+                            font-family: 'S-CoreDream-5Medium', serif;
+                            padding: 1vw 2vw;
+                            border-right: 4px solid #000;
+                            border-bottom: 4px solid #000;
+                            background: #EEEEEE;
+                            cursor: pointer; 
+                        }                        
+                        div {                            
+                            background: #fff;
+                        }
+                    }
+                    li:last-child .tab-btn{border-right: none;}
+                    li.active {                      
+                        a {  
+                            background: #10B4AE;
+                            color: #fff;
+                        }
+                    }
+                }                
+            }
+        }
+    }
+}
 
 /* gift */
 #gift {
