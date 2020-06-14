@@ -45,9 +45,8 @@ pre[class*="language-"] {
 
 /* Code blocks */
 pre[class*="language-"] {
-   padding: 1em;
-   margin-top: 2em;
-   overflow: auto;
+padding: 1em;
+overflow: auto;
 }
 
 :not(pre) > code[class*="language-"],
@@ -183,13 +182,13 @@ pre[class*="language-"].line-numbers > code {
       background-color: lightblue;
       }
       ::-webkit-scrollbar-track-piece {
-      background-color: #FFD88E;
+      background-color: #ccc;
       }
       ::-webkit-scrollbar-thumb {
-      background-color: white;
+      background-color: #888;
       }
       ::-webkit-scrollbar-corner {
-      background-color: #FFD88E; /* 우측 하단의 코너 부분 */
+      background-color: #fff; /* 우측 하단의 코너 부분 */
       }
       ::-webkit-resizer {
       background-color: green;

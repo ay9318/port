@@ -13,7 +13,7 @@ h3 {
 }
 
 #main {
-  max-width: 1600px;
+  width: 1600px;
   margin: 0 auto;
 }
 
@@ -256,6 +256,10 @@ h3 {
   font-size: 3.8vw;
 }
 
+#content02 .cont02-text .indent {
+  text-indent: 2vw;
+}
+
 #content02 .cont02-text .text {
   margin: 2vw;
   line-height: 1.6;
@@ -361,18 +365,22 @@ h3 {
   display: flex;
 }
 
+#content03 .cont03-cont .cont-standard .standard .cont-left {
+  width: 60%;
+}
+
 #content03 .cont03-cont .cont-standard .standard .cont-left h4 {
   font-family: 'yg-jalnan';
-  font-size: 2.5vw;
+  font-size: 2.8vw;
   color: #333;
 }
 
 #content03 .cont03-cont .cont-standard .standard .cont-left p {
-  margin: 2vw 0;
-  width: 78%;
+  margin: 2vw 0 0 0;
+  width: 85%;
   color: #555;
   font-family: 'S-CoreDream-4Regular';
-  font-size: 1vw;
+  font-size: 1.2vw;
 }
 
 #content03 .cont03-cont .cont-standard .standard .cont-left .cont-btn {
@@ -383,27 +391,47 @@ h3 {
   margin-right: 3vw;
   font-family: 'S-CoreDream-5Medium', serif;
   font-size: 1.5vw;
-  border: 4px solid #000;
+  border: 0.2vw solid #000;
   padding: 1.2vw 3vw;
   background: #FFD88E;
   border-radius: 10px;
   overflow: hidden;
 }
 
-#content03 .cont03-cont .cont-standard .standard .cont-right .border-box {
-  width: 100%;
-  border: 4px solid #000;
+#content03 .cont03-cont .cont-standard .standard .cont-right {
+  width: 40%;
+}
+
+#content03 .cont03-cont .cont-standard .standard .cont-right .img-box {
+  position: relative;
+  right: 30px;
+  top: 200px;
+}
+
+#content03 .cont03-cont .cont-standard .standard .cont-right .img-box img {
+  width: 32vw;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 #content03 .cont03-cont .cont-standard .tab-menu {
-  margin-top: 4vw;
+  margin-top: 6vw;
 }
 
 #content03 .cont03-cont .cont-standard .tab-menu ul {
+  overflow: auto;
+  background: #fff;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 4px solid #000;
+  border: 0.2vw solid #000;
+  width: 100%;
+  height: 31vh;
 }
 
 #content03 .cont03-cont .cont-standard .tab-menu ul li {
@@ -412,22 +440,26 @@ h3 {
 }
 
 #content03 .cont03-cont .cont-standard .tab-menu ul li a {
+  width: 100%;
   font-size: 1vw;
-  display: inline-block;
+  display: block;
   text-align: center;
   font-family: 'S-CoreDream-5Medium', serif;
   padding: 1vw 2vw;
-  border-right: 4px solid #000;
-  border-bottom: 4px solid #000;
+  border-right: 0.2vw solid #000;
+  border-bottom: 0.2vw solid #000;
   background: #EEEEEE;
-  cursor: pointer;
 }
 
 #content03 .cont03-cont .cont-standard .tab-menu ul li div {
   background: #fff;
+  position: absolute;
+  left: 0;
+  top: 62px;
+  width: 100%;
 }
 
-#content03 .cont03-cont .cont-standard .tab-menu ul li:last-child .tab-btn {
+#content03 .cont03-cont .cont-standard .tab-menu ul li:last-child a {
   border-right: none;
 }
 
